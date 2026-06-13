@@ -62,6 +62,37 @@ Use restrained publication palettes:
 
 Check that colors are distinguishable in greyscale when the data require it.
 
+## Candy-Color Plus Premium-Gray Mode
+
+Use this mode when the user asks for candy colors, soft colors, high-end gray, premium gray or a lighter but still publication-oriented figure style.
+
+Recommended roles:
+- candy colors: genotype, treatment subgroup, candidate class, workflow checkpoint or the one comparison that needs attention;
+- premium gray: page background, panel border, grid line, axis, tick label, secondary text, neutral control and non-highlighted context;
+- dark gray: main text, panel letters and key numerical labels.
+
+Default candy accents:
+- soft peach `#FFD59E`;
+- soft pink `#FFB3BA`;
+- candy blue `#BAE1FF`;
+- mint `#BAFFC9`;
+- lilac `#D7C7FF`.
+
+Default premium grays:
+- background `#F4F5F7`;
+- panel fill `#FFFFFF`;
+- panel/grid line `#D9DDE3`;
+- neutral control `#C9CDD4`;
+- main text `#2F3437`;
+- muted text `#6F7782`.
+
+Rules:
+- do not flood the whole figure with candy colors;
+- keep axes, grid lines, text and non-focal groups gray;
+- assign one stable color to one stable category across all panels;
+- use direct labels or a compact legend so the color mapping is not ambiguous;
+- check print readability and grayscale separation before delivery.
+
 ## Editable Output
 
 For journal figures:

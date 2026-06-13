@@ -1,0 +1,9 @@
+genotype,treatment,day7_germination_mean_pct,day7_germination_sd_pct,root_length_mean_cm,root_length_sd_cm,shoot_length_mean_cm,shoot_length_sd_cm,vigor_index_mean,vigor_index_sd,n_biological_replicates
+Mock-Wheat-A,Control,100.0,0.0,6.40,0.08,5.30,0.08,1170.0,0.0,4
+Mock-Wheat-A,NaCl-150mM,78.0,1.6,3.90,0.08,3.00,0.08,538.4,21.4,4
+Mock-Wheat-B,Control,97.0,1.2,6.08,0.10,4.92,0.10,1067.2,30.0,4
+Mock-Wheat-B,NaCl-150mM,61.0,1.2,3.15,0.13,2.42,0.10,340.2,19.6,4
+Mock-Wheat-C,Control,95.0,1.2,5.80,0.08,4.70,0.08,997.6,25.6,4
+Mock-Wheat-C,NaCl-150mM,49.0,1.2,2.65,0.13,2.02,0.10,229.2,15.9,4
+Mock-Wheat-WT,Control,97.5,1.0,6.05,0.13,5.00,0.08,1077.5,27.5,4
+Mock-Wheat-WT,NaCl-150mM,36.0,1.6,2.05,0.13,1.50,0.08,128.1,13.2,4

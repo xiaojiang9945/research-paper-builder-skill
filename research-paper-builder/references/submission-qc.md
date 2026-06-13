@@ -69,6 +69,35 @@ Recommended folders:
 
 Run `scripts/validate_research_package.py` when possible and report the JSON summary in plain language.
 
+## Five-Pass QC Gate
+
+For a full manuscript package, run at least five separate passes and save the result as a checklist, table or QC report.
+
+Pass 1: evidence and data consistency.
+- Verify all numerical claims against source data, not prior drafts.
+- Confirm Results statements match figures, tables and source-data files.
+- Check that unsupported mechanisms, field claims or causality claims are removed.
+
+Pass 2: citation and reference consistency.
+- Verify every in-text citation maps to a reference entry.
+- Verify every reference entry is cited.
+- Check citation role and support grade for background, method, interpretation and limitation claims.
+
+Pass 3: scientific language and claim scope.
+- Remove internal process language, local paths, TODOs and author-side rationale.
+- Check terminology ledger compliance.
+- Check grammar, paragraph jobs, tense, hedging and forbidden phrases.
+
+Pass 4: figure and visual quality.
+- Inspect each source panel and composite.
+- Check panel letters, clipping, axis labels, legends, color mapping, caption-panel agreement and source-data traceability.
+- If candy-color plus premium-gray styling is requested, confirm candy colors are limited to meaningful highlights and gray carries the scaffold.
+
+Pass 5: format, privacy and package hygiene.
+- Check section order, heading hierarchy, file names, package folders, figure/table callouts and supplementary labels.
+- Scan for private names, local paths, credentials, unpublished side-project terms and obsolete file names.
+- Confirm Data Availability, author placeholders and remaining journal-specific actions are clearly marked.
+
 ## Pre-Submission Risk Checks
 
 For ambitious journal targets, run a reviewer-risk audit before final packaging:

@@ -1,7 +1,0 @@
-genotype,treatment,n,day3_mean_pct,day3_sd_pct,day7_mean_pct,day7_sd_pct,day7_min_pct,day7_max_pct
-Mock-WT,Water,3,92.0,4.0,97.3,2.3,96.0,100.0
-Mock-WT,Salt,3,1.3,2.3,4.0,4.0,0.0,8.0
-Mock-Line-A,Water,3,94.7,2.3,98.7,2.3,96.0,100.0
-Mock-Line-A,Salt,3,24.0,4.0,32.0,4.0,28.0,36.0
-Mock-Line-B,Water,3,84.0,4.0,94.7,2.3,92.0,96.0
-Mock-Line-B,Salt,3,13.3,2.3,17.3,2.3,16.0,20.0

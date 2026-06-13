@@ -1,0 +1,19 @@
+citation_key,in_text_count,reference_list_entry_present,citation_role,status
+R01,1,true,wheat germination background,matched
+R02,1,true,salt-stress interpretation,matched
+R03,1,true,hormonal context,matched
+R04,1,true,genetic variation,matched
+R05,3,true,experimental design,matched
+R06,4,true,time-course reporting,matched
+R07,3,true,vigor metric,matched
+R08,5,true,claim calibration,matched
+R09,8,true,figure design,matched
+R10,7,true,source-data traceability,matched
+R11,4,true,literature intake,matched
+R12,6,true,citation consistency,matched
+R13,1,true,terminology control,matched
+R14,4,true,reviewer expectations,matched
+R15,3,true,field-tolerance boundary,matched
+R16,1,true,wheat stress systems,matched
+R17,7,true,data availability,matched
+R18,4,true,validation boundary,matched

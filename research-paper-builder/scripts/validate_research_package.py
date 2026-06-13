@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import re
 import zipfile
@@ -108,9 +109,15 @@ def image_summary(path: Path) -> list[dict[str, object]]:
         Image = None
     rows: list[dict[str, object]] = []
     for p in sorted(path.glob("*")):
-        if not p.is_file() or p.suffix.lower() not in {".png", ".jpg", ".jpeg", ".tif", ".tiff", ".pdf"}:
+        if not p.is_file() or p.suffix.lower() not in {".png", ".jpg", ".jpeg", ".tif", ".tiff", ".pdf", ".svg"}:
             continue
         row: dict[str, object] = {"name": p.name, "bytes": p.stat().st_size}
+        if p.suffix.lower() == ".svg":
+            text = p.read_text(encoding="utf-8", errors="ignore")[:2000]
+            width = re.search(r'width="([^"]+)"', text)
+            height = re.search(r'height="([^"]+)"', text)
+            if width and height:
+                row["size"] = [width.group(1), height.group(1)]
         if Image is not None and p.suffix.lower() != ".pdf":
             try:
                 with Image.open(p) as im:
@@ -119,6 +126,21 @@ def image_summary(path: Path) -> list[dict[str, object]]:
                 pass
         rows.append(row)
     return rows
+
+
+def qc_summary(path: Path | None, min_passes: int) -> dict[str, object] | None:
+    if path is None or not path.exists():
+        return None
+    with path.open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    failed = [r for r in rows if r.get("status", "").strip().lower() != "pass"]
+    return {
+        "qc_results": str(path),
+        "qc_pass_count": len(rows),
+        "minimum_required_passes": min_passes,
+        "minimum_met": len(rows) >= min_passes,
+        "failed": failed,
+    }
 
 
 def workbook_summary(path: Path) -> list[str]:
@@ -170,6 +192,12 @@ def validate(args: argparse.Namespace) -> dict[str, object]:
         result["workbooks"] = workbook_summary(package / "tables")
         result["source_data"] = workbook_summary(package / "source_data")
         result["text_file_hits"] = scan_text_files(package, forbidden, args.scan_cjk_text_files)
+        auto_qc = package / "qc" / "qc_results.csv"
+        if auto_qc.exists():
+            result["qc"] = qc_summary(auto_qc, args.min_qc_passes)
+
+    if args.qc_results:
+        result["qc"] = qc_summary(Path(args.qc_results), args.min_qc_passes)
 
     result["zip"] = zip_summary(Path(args.zip)) if args.zip else None
     return result
@@ -182,6 +210,8 @@ def main() -> None:
     parser.add_argument("--zip", help="Submission package ZIP")
     parser.add_argument("--forbidden", help="Comma-separated terms that should not appear")
     parser.add_argument("--scan-cjk-text-files", action="store_true", help="Also scan package text files for CJK characters")
+    parser.add_argument("--qc-results", help="QC results CSV with status column")
+    parser.add_argument("--min-qc-passes", type=int, default=5, help="Minimum number of QC passes expected")
     args = parser.parse_args()
     print(json.dumps(validate(args), indent=2, ensure_ascii=False))
 

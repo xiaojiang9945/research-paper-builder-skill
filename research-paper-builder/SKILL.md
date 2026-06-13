@@ -85,6 +85,7 @@ State the selected route briefly when it affects user expectations. Load only th
    - Use `references/plant-breeding-package.md` for plant breeding, crop genomics, genotype-phenotype, QTL/GWAS, functional-marker, germplasm-introgression or candidate-gene manuscripts.
    - Use `references/submission-qc.md` before final delivery.
    - Run a pre-submission risk audit for ambitious manuscripts: likely editor concern, likely methods/statistics concern, likely field-specialist concern and what evidence or wording reduces each risk.
+   - Run at least five focused QC passes for full manuscript packages: evidence/data, citation/reference, scientific language and claims, figure/visual design, and format/package/privacy.
    - Before packaging, reconcile manuscript claims with source data, claim banks, figure registry, captions and source workbooks. Update stale intermediate files instead of reusing prior-draft numbers.
    - If figures or modules are removed or renumbered, update every reference in text, captions, source data, figure registry, DOCX/build scripts, package manifests and QC scripts.
    - Exclude obsolete module outputs, old filenames and out-of-scope source sheets from clean submission packages.
@@ -100,6 +101,7 @@ Minimum figure checks:
 - Font sizes remain legible in the final composite figure, not only in source panels.
 - Legends do not cover data.
 - Colors are restrained, journal-appropriate and semantically consistent.
+- When a candy-color plus premium-gray style is requested, reserve candy colors for categorical emphasis and use gray for scaffold, axes, grids, text hierarchy and neutral context.
 - Source data are traceable for every panel.
 
 ## Writing Rules
@@ -120,7 +122,7 @@ When revising an existing paper:
 - Search for forbidden or removed-topic terms, internal notes, stale figure numbers and stale result numbers before final delivery.
 - Confirm each main figure has a matching caption, source-data entry and registry record.
 - For English manuscripts, check DOCX headings, inline figure count, zip integrity and unexpected CJK characters.
-- Perform at least three focused revision passes when the user asks for a polished manuscript: scientific logic and claim scope; figure-text-caption-source consistency; language, formatting, citations and forbidden-phrase cleanup.
+- Perform at least five focused revision passes when the user asks for a polished manuscript or full package: evidence/data consistency; citation/reference consistency; scientific language and claim scope; figure-text-caption-source consistency; formatting, privacy and package cleanup.
 - If layout rendering or visual inspection cannot be performed because required tools are missing, state that limitation in the delivery notes.
 
 ## Validation Script

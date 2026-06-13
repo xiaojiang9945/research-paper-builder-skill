@@ -23,7 +23,7 @@ Title:
 - Avoid inflated claims such as "novel mechanism" unless directly demonstrated.
 
 Abstract:
-- Usually 150 to 250 words unless the journal specifies otherwise.
+- Usually 220 to 280 words for a full research article unless the journal specifies otherwise; shorter abstracts are acceptable only for strict journal limits or section-specific drafting.
 - Cover problem, approach, key evidence, main conclusion and significance.
 - Include concrete details such as sample size, major methods, strongest result types and restrained interpretation.
 - Avoid unsupported mechanism language and generic importance statements.
@@ -37,10 +37,13 @@ Introduction:
 - A strong sequence is: importance, current understanding, unresolved gap, why available data can answer it, and what this study tests.
 - Cite the background claims that establish importance, mechanism and prior method precedent.
 - Avoid literature dumping. Each paragraph should narrow the problem.
+- For a full manuscript, aim for roughly 900 to 1,500 words unless the journal requires compression. About 1,200 words is a useful default for many research articles.
+- Every paragraph should have citation support, and every citation must appear in the reference list.
 
 Results:
 - Use 4 to 8 subsections for a full article when data volume supports it.
 - Each subsection should support one result theme and connect to one main figure or a clear figure group.
+- Use integrated, multi-panel figures as the Results backbone. A full article should normally include figure callouts, panel-level interpretation and source-data links, not text-only Results.
 - Start with what was measured or compared, report the result, then interpret cautiously.
 - End each subsection with a concise conclusion that does not exceed the evidence.
 

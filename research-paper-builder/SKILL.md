@@ -16,6 +16,7 @@ Before writing or revising, classify the request in one short internal pass:
 
 State the selected route briefly when it affects user expectations. Load only the references needed for that route:
 - `references/manuscript-framework.md` for structure, section order, display-item planning and section length.
+- `references/literature-intake.md` before full manuscript writing, especially when the target is SCI, Nature/Cell/Science-family, Nature Plants, Molecular Plant, The Plant Cell, PNAS or another ambitious venue.
 - `references/section-writing-playbook.md` for title, abstract, introduction, Results, Discussion, Methods or conclusion drafting.
 - `references/high-impact-journal-style.md` for Nature/Cell/Science-family, Nature Plants, Molecular Plant, PNAS-level framing, or broad-audience summary paragraphs.
 - `references/terminology-ledger.md` when a project has repeated terms, abbreviations, sample names, markers, genes, datasets, methods or mixed Chinese-English notes.
@@ -51,9 +52,11 @@ State the selected route briefly when it affects user expectations. Load only th
    - When adjacent species, public datasets or previous studies are available, use the primary study as the main story and deploy external data for module context, conservation tests, validation or contrast after the core analysis is stable.
 
 3. Learn the field before locking the story.
-   - For high-ambition manuscripts, search and inspect enough directly relevant papers to understand both conventional analyses and high-impact narrative patterns. When the user requests a large literature pass, prioritize full text, figures, methods and supplementary tables over abstract-only reading.
+   - For high-ambition full manuscripts, complete a documented literature intake before drafting: normally at least 200 directly relevant papers screened, with full-text reading notes for the core set unless the user explicitly asks for a smaller scoping task.
+   - Do not claim that a manuscript is field-ready if the literature intake is incomplete. In that case, deliver a literature plan, search strategy, reading matrix, outline and writing blockers rather than a polished final manuscript.
+   - Prioritize full text, figures, methods, supplementary tables, dataset accessions and cited methods over abstract-only reading.
    - Extract common analysis types, figure architectures, result-section rhythm, claim boundaries and validation expectations from the literature. Reuse only analyses that match the current design and data.
-   - Study at least 20 high-impact figure examples when asked to target Nature Plants, Molecular Plant, Cell/Nature/Science-family, The Plant Cell or equivalent venues; use them to improve panel logic, density, hierarchy and caption style, not to imitate a specific paper.
+   - Study at least 20 high-impact figure examples when asked to target Nature Plants, Molecular Plant, Cell/Nature/Science-family, The Plant Cell or equivalent venues; record what each example teaches about panel logic, density, hierarchy and caption style, not wording or design imitation.
    - Convert literature learning into a story map before writing: central question, design logic, figure sequence, main claim, alternative explanations, validation boundary and novelty statement.
 
 4. Design the manuscript around figures.
@@ -65,6 +68,7 @@ State the selected route briefly when it affects user expectations. Load only th
 
 5. Write as a paper, not as a report.
    - Default section order: Title, Abstract with keywords, Introduction, Results, Discussion, Methods, Data availability, Acknowledgements, Author contributions, Competing interests and References.
+   - For full research articles unless the journal says otherwise, aim for an Abstract of about 220 to 280 words and an Introduction/background of about 900 to 1,500 words; do not deliver a short report-style introduction when the user requested a manuscript.
    - Draft in evidence-first order when building a full research article: Results and figures, then Introduction/Discussion framing, then title and Abstract.
    - Give each paragraph one job: context, gap, approach, result, comparison, mechanism, implication or limitation. Split paragraphs that try to do two jobs at once.
    - Results should report observations first, then end each subsection with one restrained scientific conclusion.
@@ -75,6 +79,7 @@ State the selected route briefly when it affects user expectations. Load only th
 
 6. Polish and package.
    - Use `references/manuscript-framework.md` when designing structure or section length.
+   - Use `references/literature-intake.md` before drafting high-ambition full manuscripts or when the user requests a literature-grounded paper.
    - Use `references/writing-style.md` when polishing language, claims, citations and scientific tone.
    - Use `references/figure-layout.md` when building or revising figures.
    - Use `references/plant-breeding-package.md` for plant breeding, crop genomics, genotype-phenotype, QTL/GWAS, functional-marker, germplasm-introgression or candidate-gene manuscripts.

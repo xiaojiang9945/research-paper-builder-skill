@@ -1,0 +1,68 @@
+# Literature Intake
+
+Use this reference before writing a full manuscript, especially for SCI, Nature, Cell, Science, PNAS, Nature Plants, Molecular Plant, The Plant Cell or similar targets.
+
+## Minimum Standard
+
+For a high-ambition full manuscript, do not start polished manuscript writing until the field has been mapped.
+
+Default intake target:
+- screen at least 200 directly relevant records;
+- read the full text, figures, methods and supplementary information for the core literature set;
+- record why each paper matters or why it was excluded;
+- extract figure architecture, methods precedent, terminology, claim boundaries and validation expectations;
+- convert the literature map into a story map before drafting.
+
+If 200 papers are not available, not accessible, or not needed for a clearly narrow task, state the reason and document the smaller scope. Do not pretend the 200-paper standard was met.
+
+## Reading Matrix
+
+Create a table or CSV with these columns:
+
+```text
+id,title,year,venue,doi_or_url,full_text_status,relevance_tier,study_system,
+data_types,methods_to_learn,figure_lessons,key_findings,claim_boundary,
+limitations,how_it_informs_this_manuscript,citation_role,include_in_references
+```
+
+Relevance tiers:
+- `core`: directly shapes the manuscript argument, methods or interpretation.
+- `supporting`: supports background, discussion or terminology.
+- `contrast`: useful disagreement, limitation or alternative model.
+- `method`: needed for assay, statistic, dataset or software precedent.
+- `exclude`: screened but not used; record reason.
+
+## Search Strategy
+
+Use multiple query families:
+- organism/system plus process;
+- phenotype or assay plus stress/treatment;
+- core mechanism or pathway terms;
+- method/data type terms;
+- target journal or review-paper citation trails;
+- recent review papers, then forward/backward citation expansion.
+
+For each family, record database/source, query, date, hit count, screening rule and retained papers.
+
+## What To Extract From Full Text
+
+For each core paper, extract:
+- central question and experimental design;
+- sample size, controls, statistics and validation depth;
+- figure sequence and panel density;
+- what result types are treated as main evidence;
+- what claims are avoided or hedged;
+- terminology and abbreviations;
+- limitations and alternative explanations;
+- datasets, accessions, software and supplementary material that matter.
+
+## Writing Gate
+
+Before drafting a full manuscript, confirm:
+- literature matrix exists and is saved in the output folder;
+- at least 200 records were screened for high-ambition manuscripts, or a smaller justified scope is documented;
+- every Introduction paragraph has citation support;
+- every reference-list item is cited, and every in-text citation maps to the reference list;
+- no reference is invented from memory.
+
+If the gate is not satisfied, produce a literature plan and writing outline rather than a final manuscript.

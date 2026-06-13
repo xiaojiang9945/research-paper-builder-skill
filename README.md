@@ -8,6 +8,7 @@ This repository is currently a **private test repository**. Keep it private unti
 
 - Plan a research manuscript from raw notes, figures, tables, references, and prior drafts.
 - Build an evidence map before writing, so claims stay tied to data.
+- Require a documented literature-intake phase before high-ambition full manuscript writing.
 - Design a figure-led Results structure for journal-style papers.
 - Polish title, abstract, introduction, Results, Discussion, Methods, captions, and Data Availability.
 - Check terminology consistency, citation/reference consistency, source-data traceability, and submission package hygiene.
@@ -32,14 +33,20 @@ research-paper-builder-skill/
 
 ## Quick Demo
 
-The demo uses a fully synthetic plant germination dataset. It is designed to show the skill output shape, not to make a biological claim.
+The demo uses a fully synthetic plant germination dataset. It is designed to show a publication-scale output shape, not to make a biological claim.
 
 Example prompt:
 
 ```text
 Use the research-paper-builder skill on examples/synthetic-plant-study/input/synthetic_germination_data.csv.
-Target a short plant-science research article. Build the evidence map, terminology ledger, figure plan,
-manuscript draft, Data Availability statement, reviewer-risk audit, and package manifest.
+Target a plant-science research article package rather than a short report.
+Before writing, produce a literature-intake status note. For a real manuscript, require a 200-paper
+screening/full-text reading matrix; for this synthetic demo, use the provided synthetic citation set only
+to demonstrate citation-reference matching.
+
+Build an evidence map, terminology ledger, integrated multi-panel Figure 1, figure-led Results,
+approximately 250-word Abstract, approximately 1,200-word Introduction/background with citation keys,
+reference list, citation-reference audit, Data Availability statement, reviewer-risk audit, and package manifest.
 ```
 
 Expected demo output is already included under:
@@ -53,7 +60,11 @@ Start with:
 - [Demo overview](examples/synthetic-plant-study/README.md)
 - [Synthetic input data](examples/synthetic-plant-study/input/synthetic_germination_data.csv)
 - [Example manuscript draft](examples/synthetic-plant-study/output/manuscript_draft.md)
+- [Example composite figure](examples/synthetic-plant-study/output/figures/figure1_composite.svg)
+- [Example citation-reference audit](examples/synthetic-plant-study/output/citation_reference_audit.csv)
 - [Example reviewer-risk audit](examples/synthetic-plant-study/output/reviewer_risk_audit.md)
+
+The demo references are synthetic placeholders. Real manuscript work should use verified literature and should not claim a 200-paper review unless a reading matrix exists.
 
 ## Install Or Test Locally
 

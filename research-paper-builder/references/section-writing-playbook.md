@@ -46,6 +46,8 @@ Use a compact progression:
 
 Write the Abstract last for full manuscripts. If a result value is not final, mark it as a placeholder instead of smoothing over the gap.
 
+For full research articles, target about 250 words unless the journal gives a different limit. A 100-word summary is not an adequate manuscript abstract unless explicitly requested.
+
 ## Introduction
 
 Move from field relevance to the precise gap the paper can address:
@@ -56,6 +58,8 @@ Move from field relevance to the precise gap the paper can address:
 
 Do not overload the Introduction with methods details, local project history or defensive explanations.
 
+For a full manuscript, build the Introduction/background as a developed literature argument, usually around 1,200 words. Each paragraph should cite the literature it depends on, and the reference list must contain exactly the cited works.
+
 ## Results
 
 Use figures as the spine when possible:
@@ -63,6 +67,8 @@ Use figures as the spine when possible:
 - report the observed pattern with sample size, effect direction and key statistics;
 - explain the immediate meaning;
 - end the subsection with one restrained conclusion.
+- For each main figure, write Results text that names panel letters and explains what each panel contributes to the result theme.
+- Do not deliver text-only Results when the project has enough data for integrated figures. Create a figure plan, source data and caption even if final visual rendering is a separate task.
 
 Do not start Results subsections with broad literature background. Do not present file conversion, primer design, plotting or data cleaning as scientific findings.
 

@@ -1,0 +1,19 @@
+citation_key,in_text_count,reference_list_entry_present,first_section,citation_role,status
+R01,2,true,Introduction,background,matched
+R02,2,true,Introduction,background,matched
+R03,1,true,Introduction,mechanistic context,matched
+R04,3,true,Introduction,stress context,matched
+R05,3,true,Introduction,stress context,matched
+R06,2,true,Introduction,natural variation context,matched
+R07,2,true,Introduction,quantitative genetics context,matched
+R08,4,true,Introduction,methods precedent,matched
+R09,3,true,Results,statistics/reporting,matched
+R10,3,true,Results,time-course analysis,matched
+R11,6,true,Results,figure design,matched
+R12,7,true,Results/source data,source-data traceability,matched
+R13,7,true,Discussion,claim calibration,matched
+R14,5,true,Discussion,reviewer expectation,matched
+R15,3,true,Methods,terminology,matched
+R16,6,true,Data Availability,reproducibility,matched
+R17,5,true,Discussion,limitation,matched
+R18,5,true,Discussion,validation boundary,matched

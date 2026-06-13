@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Paper Builder"
+  short_description: "Build publication-ready research papers."
+  default_prompt: "Turn my research materials into a publishable manuscript with polished figures, journal-style writing, citation checks and submission-ready files."

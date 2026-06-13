@@ -1,0 +1,63 @@
+# Citation And Data Availability
+
+Use this reference when checking citations, finding support for claims, preparing Data Availability statements, planning repositories, or building submission metadata.
+
+## Citation Support Workflow
+
+1. Split manuscript claims into citable units.
+2. Mark each unit as background, method precedent, direct comparison, limitation, or interpretation.
+3. For each unit, identify the minimum citation needed.
+4. Prefer primary literature for specific claims and reviews for broad background.
+5. Verify bibliographic metadata from a reliable source before finalizing.
+
+Do not fabricate DOI, page range, volume, issue, accession number or repository metadata. If metadata is unavailable, mark it for author verification.
+
+## Support Strength
+
+Grade candidate references:
+- `direct`: same biological/technical claim or method.
+- `partial`: supports part of the claim but not the full scope.
+- `background`: useful context only.
+- `contrast`: relevant disagreement or limitation.
+- `metadata-only`: useful for locating the source but not enough to support a claim.
+
+Use direct or partial support for Results and Discussion claims. Background citations are not substitutes for evidence.
+
+## Citation Hygiene
+
+Before delivery:
+- every in-text citation has a reference-list entry;
+- every reference-list entry is cited;
+- citation ranges are valid and ordered;
+- references cited in captions are also present in the reference list;
+- no reference-paper examples are cited merely because they were used for style matching;
+- citation style matches the target journal.
+
+## Data Availability
+
+Draft the statement around actual access paths:
+- repository name and accession/DOI when available;
+- files included as supplementary tables or source data;
+- code repository, commit, release or archive DOI when available;
+- controlled-access or author-request data with reason;
+- restrictions from human subjects, proprietary material or unpublished breeding lines.
+
+Avoid vague statements such as "data are available on request" when repository deposition is expected. If deposition is pending, state what must be deposited before submission.
+
+## FAIR And Reproducibility Check
+
+For source data and code:
+- filenames are stable and descriptive;
+- tables have data dictionaries or clear headers;
+- units and normalization are stated;
+- sample IDs map to metadata;
+- scripts can reproduce processed tables and figures;
+- large raw files are referenced rather than copied into lightweight manuscript packages unless required.
+
+## Output Pattern
+
+When asked to produce citation or data-availability work, return:
+- claim or data item;
+- proposed citation/repository support;
+- support grade or deposition status;
+- unresolved author action.

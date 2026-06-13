@@ -11,7 +11,7 @@
 | file | role |
 |---|---|
 | `output/evidence_map.md` | evidence classes and supported claim boundaries |
-| `output/literature_intake_status.md` | disclosure that demo citations are synthetic and real tasks require 200-paper intake |
+| `output/literature_intake_status.md` | disclosure that demo citations are synthetic and real tasks require 200-paper full-text intake |
 | `output/terminology_ledger.md` | canonical terminology and forbidden variants |
 | `output/figure_plan.md` | integrated multi-panel figure structure, caption draft and visual QA |
 | `output/figures/figure1_composite.svg` | editable synthetic composite figure |
@@ -32,4 +32,4 @@
 - Claim boundary stated: passed.
 - Source data listed for plotted values: passed.
 - Citation-reference audit included: passed.
-- Real 200-paper literature review not claimed: passed.
+- Real 200-paper full-text literature review not claimed: passed.

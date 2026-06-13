@@ -6,13 +6,13 @@ This demo does not claim that 200 real papers were searched or read. It uses a s
 
 For a real high-ambition manuscript using this skill, the writing gate should require:
 
-- at least 200 records screened from relevant databases and citation trails;
-- full-text reading notes for the core literature set;
+- documented search and screening across relevant databases and citation trails;
+- at least 200 directly relevant papers fully read and entered into a reading matrix;
 - extraction of figure architecture, methods precedent, claim boundaries and validation expectations;
 - a saved literature matrix with relevance tier, citation role and inclusion decision;
 - verified reference metadata before final manuscript drafting.
 
-If the literature intake is incomplete, the skill should produce a literature plan, reading matrix and outline instead of a polished final manuscript.
+If the 200-paper full-text intake is incomplete, the skill should produce a literature plan, partial reading matrix and outline instead of a polished final manuscript.
 
 ## Demo Substitution
 

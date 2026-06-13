@@ -41,4 +41,4 @@ Do the mock genotypes differ in seed germination retention under a salt treatmen
 - Do not claim field performance, seed vigor, or species-level generality.
 - Do not claim statistical significance beyond the provided descriptive summary.
 - Do not claim that the synthetic citation set is a real literature review.
-- Do not claim that the demo completed the 200-paper literature-intake gate required for a real high-ambition manuscript.
+- Do not claim that the demo completed the 200-paper full-text literature-intake gate required for a real high-ambition manuscript.

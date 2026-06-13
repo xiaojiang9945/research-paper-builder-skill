@@ -14,7 +14,7 @@ This demo is fully synthetic. It exists only to show how `research-paper-builder
 Use the research-paper-builder skill on input/synthetic_germination_data.csv.
 Target a plant-science research article package rather than a short report.
 Before writing, produce a literature-intake status note. For a real manuscript, require a 200-paper
-screening/full-text reading matrix; for this synthetic demo, use the provided synthetic citation set only
+full-text reading matrix after documented search and screening; for this synthetic demo, use the provided synthetic citation set only
 to demonstrate citation-reference matching.
 
 Build an evidence map, terminology ledger, integrated multi-panel Figure 1, figure-led Results,

@@ -52,7 +52,7 @@ State the selected route briefly when it affects user expectations. Load only th
    - When adjacent species, public datasets or previous studies are available, use the primary study as the main story and deploy external data for module context, conservation tests, validation or contrast after the core analysis is stable.
 
 3. Learn the field before locking the story.
-   - For high-ambition full manuscripts, complete a documented literature intake before drafting: normally at least 200 directly relevant papers screened, with full-text reading notes for the core set unless the user explicitly asks for a smaller scoping task.
+   - For high-ambition full manuscripts, complete a documented literature intake before drafting: normally at least 200 directly relevant papers fully read and entered into a reading matrix, after broader database and citation-trail screening when needed.
    - Do not claim that a manuscript is field-ready if the literature intake is incomplete. In that case, deliver a literature plan, search strategy, reading matrix, outline and writing blockers rather than a polished final manuscript.
    - Prioritize full text, figures, methods, supplementary tables, dataset accessions and cited methods over abstract-only reading.
    - Extract common analysis types, figure architectures, result-section rhythm, claim boundaries and validation expectations from the literature. Reuse only analyses that match the current design and data.

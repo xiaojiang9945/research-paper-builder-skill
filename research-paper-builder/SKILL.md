@@ -123,7 +123,7 @@ When revising an existing paper:
 When a manuscript package exists, run:
 
 ```powershell
-& python C:\Users\xiaoj\.codex\skills\research-paper-builder\scripts\validate_research_package.py `
+& python .\scripts\validate_research_package.py `
   --package "path\to\submission_package" `
   --docx "path\to\manuscript.docx" `
   --zip "path\to\submission_package.zip"

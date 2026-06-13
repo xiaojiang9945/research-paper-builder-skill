@@ -1,0 +1,10 @@
+dist/
+*.skill
+*.zip
+*.docx
+*.pdf
+*.tmp
+*.log
+__pycache__/
+.DS_Store
+Thumbs.db

@@ -44,9 +44,9 @@ Before writing, produce a literature-intake status note. For a real manuscript, 
 full-text reading matrix after documented search and screening.
 
 Run examples/synthetic-wheat-study/scripts/build_demo.py, then build a formal manuscript-style package with
-three main figures, figure captions below each figure, figure-led Results,
-candy-colour highlights on a premium-gray scaffold, approximately 250-word Abstract,
-approximately 1,200-word Introduction/background, Nature-style numbered references,
+three white-background six-panel main figures, figure captions below each figure, figure-led Results,
+candy-colour highlights on premium-gray axes and grid lines, approximately 250-word Abstract,
+approximately 1,200-word Introduction/background in fewer developed paragraphs, at least 30 Nature-style numbered references,
 citation-reference audit, Data Availability statement, reviewer-risk audit, five-pass QC report, and package manifest.
 ```
 
@@ -62,7 +62,7 @@ Start with:
 - [Synthetic wheat input data](examples/synthetic-wheat-study/input/synthetic_wheat_germination_data.csv)
 - [Demo build script](examples/synthetic-wheat-study/scripts/build_demo.py)
 - [Example manuscript draft](examples/synthetic-wheat-study/output/manuscript_draft.md)
-- [Example Figure 1](examples/synthetic-wheat-study/output/figures/figure1_germination_and_vigour.svg)
+- [Example Figure 1](examples/synthetic-wheat-study/output/figures/figure1_geography_germination_vigour.svg)
 - [Example Figure 2](examples/synthetic-wheat-study/output/figures/figure2_physiology_matrix.svg)
 - [Example Figure 3](examples/synthetic-wheat-study/output/figures/figure3_transcript_and_integration.svg)
 - [Example five-pass QC report](examples/synthetic-wheat-study/output/qc/five_pass_qc_report.md)

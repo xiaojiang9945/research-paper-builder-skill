@@ -27,7 +27,7 @@ Each main figure should answer one result question. A strong composite figure us
 - one mechanistic or explanatory analysis,
 - one source-data-supported candidate or validation-oriented panel when appropriate.
 
-Panel count follows the evidence. Do not force an even number of panels. A figure can have 2, 3, 4, 5, 6 or more panels if the theme requires it.
+Panel count follows the evidence, but formal main figures should default to 4 or 6 panels when there is no special reason to do otherwise. Use 2, 3, 5 or more panels only when the target journal, evidence structure, figure geometry or readability clearly justifies the departure.
 
 ## Composite Layout
 
@@ -38,7 +38,9 @@ Use these defaults unless the journal specifies otherwise:
 - shared legends where possible;
 - aligned axes for comparable panels;
 - balanced panel area, with no large empty regions;
-- consistent margins and gutters across a figure.
+- consistent margins and gutters across a figure;
+- pure white outer figure background for submitted or submission-like figures;
+- compact gutters that keep panels visually close while preserving labels, legends and axis readability.
 
 If a source plot has a long y-axis label, reduce label distance, abbreviate terms or widen that panel. Do not solve label collisions by shrinking all text.
 
@@ -64,6 +66,18 @@ Use restrained publication palettes:
 
 Check that colors are distinguishable in greyscale when the data require it.
 
+## Data-Rich Figure Types
+
+When the dataset supports them, prefer richer figure panels over repeated simple bar charts:
+- maps or coordinate plots for accession, sampling or geographic-distribution metadata;
+- scatter or bubble plots for trait relationships and multi-variable ranking;
+- box, violin or raincloud-style distributions for replicate-level variation;
+- heatmaps for trait-by-line or gene-by-line matrices;
+- two-dimensional density fields or contour plots for paired physiological spaces;
+- 3D surfaces only when they clarify a continuous response surface and remain readable at print size.
+
+Use these panels to answer distinct evidence questions. Do not add a complex plot only for decoration.
+
 ## Candy-Color Plus Premium-Gray Mode
 
 Use this mode when the user asks for candy colors, soft colors, high-end gray, premium gray or a lighter but still publication-oriented figure style.
@@ -81,7 +95,7 @@ Default candy accents:
 - lilac `#D7C7FF`.
 
 Default premium grays:
-- background `#F4F5F7`;
+- outer background `#FFFFFF`;
 - panel fill `#FFFFFF`;
 - panel/grid line `#D9DDE3`;
 - neutral control `#C9CDD4`;

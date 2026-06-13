@@ -1,1 +1,1 @@
-Source data supporting Figs. 1-3 are included as CSV files in this example package.
+Source data supporting Figs. 1-3 are included in this package.

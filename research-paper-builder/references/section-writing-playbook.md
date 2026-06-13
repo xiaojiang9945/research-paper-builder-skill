@@ -60,6 +60,8 @@ Do not overload the Introduction with methods details, local project history or 
 
 For a full manuscript, build the Introduction/background as a developed literature argument, usually around 1,200 words. Each paragraph should cite the literature it depends on, and the reference list must contain exactly the cited works.
 
+Prefer fewer developed Introduction paragraphs over many short background fragments. For manuscript-scale drafts, 4-6 paragraphs is usually a better default than a chain of brief paragraphs, provided each paragraph has a clear job and the citations still map exactly to the reference list.
+
 ## Results
 
 Use figures as the spine when possible:
@@ -79,6 +81,8 @@ Organize around 3-4 major interpretive points:
 - how the result agrees or conflicts with prior work;
 - what mechanism or model is supported, and what remains unresolved;
 - what practical or functional follow-up is justified.
+
+For a full research article or submission-like draft, use at least three visible Discussion subpoints unless the target journal forbids subheadings. Each subpoint should interpret a distinct issue, such as evidence convergence, literature/mechanism fit, validation boundary or practical follow-up.
 
 Avoid repeating every result value. Use limitations to define scope, not to weaken every conclusion.
 

@@ -61,6 +61,8 @@ Checks:
 - include page range or article number;
 - include year in parentheses;
 - do not invent DOI, issue, volume or page metadata.
+- for Nature-style full research article examples, keep at least 30 cited references when the user requests manuscript-scale literature depth, while staying within the target journal's maximum;
+- verify that every listed reference is cited and every in-text citation has a listed reference.
 
 ## Data Availability
 

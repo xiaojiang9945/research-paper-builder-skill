@@ -1,6 +1,6 @@
 round,focus,checks,status,notes
-1,evidence and data,three formal figures have source CSV files and Results callouts,pass,Figures 1-3 generated from structured input tables.
-2,citations and references,Nature-style numbered citations map to numbered reference entries,pass,12 cited references; 12 reference entries.
-3,language and claim scope,"formal manuscript and figures exclude process, demo and claim-boundary wording",pass,QC and scope notes are kept outside formal manuscript files.
-4,figure and visual style,three SVG figures use candy accents with premium-gray scaffold,pass,Main figures contain scientific panels only.
-5,format and package,"abstract, introduction, captions and package files are present",pass,Abstract 232 words; Introduction 1164 words.
+1,evidence and data,three formal six-panel figures have source CSV files and Results callouts,pass,Figures 1-3 are regenerated from structured input tables and source-data files.
+2,citations and references,Nature-style numbered citations map to at least 30 numbered reference entries,pass,34 cited references; 34 reference entries.
+3,language and claim scope,"formal manuscript and figures exclude process, demo and claim-boundary wording",pass,Process and validation notes are kept outside formal manuscript files.
+4,figure and visual style,"all main figures use white backgrounds, compact six-panel layouts and mixed map/scatter/box/contour/surface panels",pass,Figures use a pure white page and restrained candy-colour data accents.
+5,format and package,"abstract, compressed introduction, three-point discussion, captions and package files are present",pass,Abstract 226 words; Introduction 1101 words in 4 paragraphs; Discussion subpoints 3.

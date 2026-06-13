@@ -61,7 +61,7 @@ State the selected route briefly when it affects user expectations. Load only th
 
 4. Design the manuscript around figures.
    - Use figures as the spine of Results when the dataset supports it.
-   - Each main figure should support one result theme, with panel count determined by evidence needs rather than a forced number.
+   - Each main figure should support one result theme. For formal composite figures, default to 4 or 6 panels unless the journal format or evidence structure gives a clear reason to use a different count.
    - Keep tables for dense values, models, sample metadata, statistics, supplementary material and source data.
    - Build figures from the manuscript's evidence map, not from whatever plot exists already. Existing plots can supply data or cautionary examples, but they should not lock the final visual logic.
    - If AI image generation is used for visual exploration, treat generated images as style concepts only. Redraw data-bearing panels from traceable source data before manuscript delivery.
@@ -102,6 +102,9 @@ Minimum figure checks:
 - Legends do not cover data.
 - Colors are restrained, journal-appropriate and semantically consistent.
 - When a candy-color plus premium-gray style is requested, reserve candy colors for categorical emphasis and use gray for scaffold, axes, grids, text hierarchy and neutral context.
+- Use a pure white outer background for formal manuscript figures unless the target journal explicitly requires another background.
+- Keep gutters compact and panel sizes balanced; inspect rendered figures visually and adjust spacing until labels, legends and axes do not overlap.
+- When no special evidence constraint exists, compose formal main figures as 4- or 6-panel figures. Use maps, scatter/bubble plots, box/violin plots, heatmaps, contour fields or 3D response surfaces when the source data support them.
 - Source data are traceable for every panel.
 
 ## Writing Rules

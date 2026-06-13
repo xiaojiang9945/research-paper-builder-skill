@@ -1,6 +1,6 @@
 # Literature Intake Status
 
-This example uses verified style and structure for a manuscript-scale wheat demo, but it does not claim that a real 200-paper full-text review was completed for a new biological study.
+This runnable wheat example demonstrates manuscript-scale structure, reference formatting and figure packaging. It does not claim that a real 200-paper full-text review was completed for a new biological study.
 
 For real high-ambition manuscripts, the writing gate remains:
 

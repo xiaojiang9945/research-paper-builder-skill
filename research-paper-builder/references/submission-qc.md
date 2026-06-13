@@ -45,6 +45,10 @@ Do not claim final-package QC passed for a partial route.
 - Captions define panel statistics, sample size and abbreviations.
 - Every figure panel has traceable source data or a documented non-data role.
 - Figure labels, captions and manuscript text use the same canonical terms.
+- Formal manuscript figures use a pure white outer background unless journal instructions require otherwise.
+- Formal composite figures default to 4 or 6 panels when there is no evidence-specific reason to depart.
+- Panel gutters are compact and visually inspected; labels, legends, colorbars and 3D axes do not overlap or clip.
+- Rich plot types, such as maps, scatter/bubble plots, box/violin plots, heatmaps, contour plots and 3D surfaces, are used only when source data support the panel.
 
 ## Data And Table Checks
 
@@ -92,6 +96,9 @@ Pass 4: figure and visual quality.
 - Inspect each source panel and composite.
 - Check panel letters, clipping, axis labels, legends, color mapping, caption-panel agreement and source-data traceability.
 - If candy-color plus premium-gray styling is requested, confirm candy colors are limited to meaningful highlights and gray carries the scaffold.
+- Confirm the whole rendered figure, not only the plotting area, has a white background.
+- Confirm default 4- or 6-panel composition for standard main figures, or document why a different panel count is better.
+- Confirm figure spacing is compact enough for a journal composite while preserving readability.
 - Confirm formal manuscript figures do not contain claim-boundary panels, QC gates, package manifests, process notes or demo explanations.
 
 Pass 5: format, privacy and package hygiene.

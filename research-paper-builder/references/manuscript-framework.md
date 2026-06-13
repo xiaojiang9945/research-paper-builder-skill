@@ -37,7 +37,7 @@ Introduction:
 - A strong sequence is: importance, current understanding, unresolved gap, why available data can answer it, and what this study tests.
 - Cite the background claims that establish importance, mechanism and prior method precedent.
 - Avoid literature dumping. Each paragraph should narrow the problem.
-- For a full manuscript, aim for roughly 900 to 1,500 words unless the journal requires compression. About 1,200 words is a useful default for many research articles.
+- For a full manuscript, aim for roughly 1,100 to 1,300 words unless the journal requires compression. About 1,200 words is the default for a developed research-article background.
 - Every paragraph should have citation support, and every citation must appear in the reference list.
 
 Results:

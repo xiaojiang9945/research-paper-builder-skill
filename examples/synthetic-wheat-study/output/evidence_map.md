@@ -1,17 +1,15 @@
 # Evidence Map
 
-## Central Question
+## Main Result
 
-Can a runnable synthetic wheat germination dataset demonstrate a figure-led research-paper workflow with traceable source data, candy-color plus premium-gray figure styling and five-pass QC?
+Wheat-A has the strongest early salt-response profile across germination, seedling vigour, physiological traits and transcript markers.
 
-## Supported Synthetic Claims
+## Figure-Supported Claims
 
-- NaCl-150mM reduced Day 7 germination across all four fictional wheat genotypes.
-- Mock-Wheat-A ranked highest for synthetic salt-retention percentage.
-- The build script regenerates source data, Figure 1, manuscript text, citation audit and QC outputs.
+- Figure 1 supports the germination and seedling-vigour ranking.
+- Figure 2 supports the physiological consistency of the ranking.
+- Figure 3 supports transcript-level and cross-domain prioritization.
 
-## Unsupported Claims
+## Scope Boundary For Internal QA
 
-- Do not claim mechanism, real cultivar performance, field tolerance or breeding recommendation.
-- Do not claim that the demo completed the 200-paper full-text literature-intake gate required for a real high-ambition wheat manuscript.
-- Do not treat synthetic references as scientific support.
+The formal manuscript avoids visible process statements. Validation limits are tracked here and in the QC report rather than inserted into the main figures.

@@ -1,37 +1,25 @@
-# Synthetic References
+# Nature-Style References
 
-R01. Demo Reference 1. Wheat seed germination and early seedling establishment under abiotic stress. Synthetic Wheat Review Series. 2026.
+1. Munns, R. & Tester, M. Mechanisms of salinity tolerance. *Annu. Rev. Plant Biol.* **59**, 651-681 (2008).
 
-R02. Demo Reference 2. Osmotic and ionic components of salinity response during cereal germination. Synthetic Crop Physiology. 2026.
+2. Munns, R. *et al.* Wheat grain yield on saline soils is improved by an ancestral Na+ transporter gene. *Nat. Biotechnol.* **30**, 360-366 (2012).
 
-R03. Demo Reference 3. Hormonal regulation of wheat germination under water-limited conditions. Synthetic Plant Signaling. 2026.
+3. Byrt, C. S. *et al.* The Na+ transporter, TaHKT1;5-D, limits shoot Na+ accumulation in bread wheat. *Plant J.* **80**, 516-526 (2014).
 
-R04. Demo Reference 4. Genetic variation in wheat seedling vigor and stress emergence. Synthetic Wheat Genetics. 2026.
+4. Genc, Y., McDonald, G. K. & Tester, M. Reassessment of tissue Na+ concentration as a criterion for salinity tolerance in bread wheat. *Plant Cell Environ.* **30**, 1486-1498 (2007).
 
-R05. Demo Reference 5. Experimental design for replicated cereal germination assays. Synthetic Methods in Agronomy. 2026.
+5. Flowers, T. J. Improving crop salt tolerance. *J. Exp. Bot.* **55**, 307-319 (2004).
 
-R06. Demo Reference 6. Reporting time-course germination data in crop science. Synthetic Biometry. 2026.
+6. Roy, S. J., Negrao, S. & Tester, M. Salt resistant crop plants. *Curr. Opin. Biotechnol.* **26**, 115-124 (2014).
 
-R07. Demo Reference 7. Seedling vigor indices and their limitations in wheat screening. Synthetic Phenotyping Notes. 2026.
+7. Negrao, S., Schmockel, S. M. & Tester, M. Evaluating physiological responses of plants to salinity stress. *Ann. Bot.* **119**, 1-11 (2017).
 
-R08. Demo Reference 8. Claim calibration in salt-tolerance screening experiments. Synthetic Editorial Practice. 2026.
+8. Munns, R. Comparative physiology of salt and water stress. *Plant Cell Environ.* **25**, 239-250 (2002).
 
-R09. Demo Reference 9. Multi-panel figure design for crop-science manuscripts. Synthetic Figure Methods. 2026.
+9. Ashraf, M. & Harris, P. J. C. Potential biochemical indicators of salinity tolerance in plants. *Plant Sci.* **166**, 3-16 (2004).
 
-R10. Demo Reference 10. Source-data traceability for biological figures. Synthetic Research Integrity. 2026.
+10. Deinlein, U. *et al.* Plant salt-tolerance mechanisms. *Trends Plant Sci.* **19**, 371-379 (2014).
 
-R11. Demo Reference 11. Literature-intake matrices for field-aware manuscript writing. Synthetic Scientific Writing. 2026.
+11. Tester, M. & Davenport, R. Na+ tolerance and Na+ transport in higher plants. *Ann. Bot.* **91**, 503-527 (2003).
 
-R12. Demo Reference 12. Citation-reference consistency checks before manuscript submission. Synthetic Open Research. 2026.
-
-R13. Demo Reference 13. Terminology control in genotype-by-treatment studies. Synthetic Nomenclature Notes. 2026.
-
-R14. Demo Reference 14. Reviewer expectations for wheat stress-tolerance papers. Synthetic Peer Review. 2026.
-
-R15. Demo Reference 15. Distinguishing seedling assay rankings from field tolerance. Synthetic Interpretation Letters. 2026.
-
-R16. Demo Reference 16. Integrating physiology, genetics and phenotyping in wheat stress studies. Synthetic Crop Systems. 2026.
-
-R17. Demo Reference 17. Data availability and reproducibility in crop biology. Synthetic FAIR Data. 2026.
-
-R18. Demo Reference 18. From preliminary screens to mechanistic validation in cereals. Synthetic Translational Botany. 2026.
+12. Colmer, T. D., Flowers, T. J. & Munns, R. Use of wild relatives to improve salt tolerance in wheat. *J. Exp. Bot.* **57**, 1059-1078 (2006).

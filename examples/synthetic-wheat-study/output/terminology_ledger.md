@@ -1,10 +1,9 @@
 # Terminology Ledger
 
-| canonical term | allowed variants | forbidden variants | note |
-|---|---|---|---|
-| wheat | _Triticum aestivum_ | generic model-plant placeholder, rice, maize | demo organism context |
-| Mock-Wheat-WT | WT | real cultivar name | fictional genotype |
-| Mock-Wheat-A | Line A | tolerant cultivar | fictional top-ranked line |
-| NaCl-150mM | salt treatment | salinity field stress | controlled synthetic treatment |
-| salt retention | retention percentage | field tolerance | descriptive metric only |
-| five-pass QC | QC gate | final approval | demo check mechanism |
+| canonical term | allowed variants | avoid in formal manuscript |
+|---|---|---|
+| wheat line | line | mock genotype, demo line |
+| NaCl treatment | NaCl-150mM | generic salt condition |
+| germination retention | retention | tolerance proof |
+| physiological composite score | composite score | final breeding value |
+| transcript abundance | marker-gene response | mechanism proof |

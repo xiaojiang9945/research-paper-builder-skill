@@ -68,7 +68,7 @@ State the selected route briefly when it affects user expectations. Load only th
 
 5. Write as a paper, not as a report.
    - Default section order: Title, Abstract with keywords, Introduction, Results, Discussion, Methods, Data availability, Acknowledgements, Author contributions, Competing interests and References.
-   - For full research articles unless the journal says otherwise, aim for an Abstract of about 220 to 280 words and an Introduction/background of about 900 to 1,500 words; do not deliver a short report-style introduction when the user requested a manuscript.
+   - For full research articles unless the journal says otherwise, aim for an Abstract of about 220 to 280 words and an Introduction/background of about 1,100 to 1,300 words, with about 1,200 words as the default; do not deliver a short report-style introduction when the user requested a manuscript.
    - Draft in evidence-first order when building a full research article: Results and figures, then Introduction/Discussion framing, then title and Abstract.
    - Give each paragraph one job: context, gap, approach, result, comparison, mechanism, implication or limitation. Split paragraphs that try to do two jobs at once.
    - Results should report observations first, then end each subsection with one restrained scientific conclusion.

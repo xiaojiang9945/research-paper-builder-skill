@@ -186,7 +186,10 @@ def validate(args: argparse.Namespace) -> dict[str, object]:
 
     if package and package.exists():
         result["package"] = str(package)
-        result["main_figures"] = image_summary(package / "figures" / "main")
+        main_figure_dir = package / "figures" / "main"
+        if not main_figure_dir.exists():
+            main_figure_dir = package / "figures"
+        result["main_figures"] = image_summary(main_figure_dir)
         result["source_panel_count"] = count_files(package / "figures" / "source_panels", "*")
         result["qc_figure_count"] = count_files(package / "figures" / "qc", "*")
         result["workbooks"] = workbook_summary(package / "tables")

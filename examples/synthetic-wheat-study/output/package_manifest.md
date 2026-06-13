@@ -2,19 +2,12 @@
 
 | file | purpose |
 |---|---|
-| `input/synthetic_wheat_germination_data.csv` | synthetic raw-style wheat germination input |
-| `scripts/build_demo.py` | reproducible demo generation script |
-| `output/source_data_figure1.csv` | source data for time-course figure panels |
-| `output/supplementary_table_s1_summary.csv` | endpoint, length and vigor summaries |
-| `output/figures/figure1_composite.svg` | editable candy-color plus premium-gray composite figure |
-| `output/manuscript_draft.md` | manuscript-scale draft generated from the synthetic demo |
-| `output/citation_reference_audit.csv` | citation-reference matching audit |
-| `output/qc/five_pass_qc_report.md` | text, language, image and format checks |
-| `output/qc/qc_results.csv` | machine-readable five-pass QC result table |
-
-## Privacy Result
-
-- No real research data included.
-- No local absolute paths included.
-- No private names, tokens or credentials included.
-- Real 200-paper full-text literature review not claimed.
+| `input/synthetic_wheat_germination_data.csv` | germination input |
+| `input/synthetic_wheat_physiology_data.csv` | physiology input |
+| `input/synthetic_wheat_expression_data.csv` | expression input |
+| `output/figures/figure1_germination_and_vigour.svg` | formal main Figure 1 |
+| `output/figures/figure2_physiology_matrix.svg` | formal main Figure 2 |
+| `output/figures/figure3_transcript_and_integration.svg` | formal main Figure 3 |
+| `output/manuscript_draft.md` | formal-style manuscript draft |
+| `output/qc/five_pass_qc_report.md` | QC report kept outside formal manuscript |
+| `output/qc/qc_results.csv` | machine-readable QC result table |

@@ -92,6 +92,7 @@ Pass 4: figure and visual quality.
 - Inspect each source panel and composite.
 - Check panel letters, clipping, axis labels, legends, color mapping, caption-panel agreement and source-data traceability.
 - If candy-color plus premium-gray styling is requested, confirm candy colors are limited to meaningful highlights and gray carries the scaffold.
+- Confirm formal manuscript figures do not contain claim-boundary panels, QC gates, package manifests, process notes or demo explanations.
 
 Pass 5: format, privacy and package hygiene.
 - Check section order, heading hierarchy, file names, package folders, figure/table callouts and supplementary labels.

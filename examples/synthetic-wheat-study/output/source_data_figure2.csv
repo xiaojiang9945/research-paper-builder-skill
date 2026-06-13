@@ -1,0 +1,6 @@
+genotype,root_length_cm,shoot_length_cm,relative_water_content_pct,k_na_ratio,mda_nmol_g_fw,proline_umol_g_fw,sod_u_mg_protein,cat_u_mg_protein,vigor_index,retention_pct
+Wheat-A,8.30,6.10,88.00,1.75,9.10,5.60,156.00,54.00,1180.80,83.67
+Wheat-B,6.70,4.90,78.00,1.20,12.60,4.20,132.00,43.00,742.40,66.67
+Wheat-C,5.80,4.10,72.00,0.92,15.20,3.70,118.00,37.00,554.40,59.57
+Wheat-D,4.70,3.30,63.00,0.62,19.40,2.90,96.00,30.00,320.00,43.48
+Wheat-E,7.50,5.40,82.00,1.44,10.80,4.80,144.00,49.00,928.80,75.00

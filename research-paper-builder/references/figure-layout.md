@@ -16,6 +16,8 @@ For each figure, record:
 
 If two panels answer the same question, merge, remove or repurpose one of them.
 
+Formal main figures should contain scientific content only. Do not place author-facing statements, claim-boundary boxes, QC gates, package manifests, process notes, generation notes, prompt notes or explanatory demo text inside figures intended to represent a submitted manuscript. Put those checks in separate QC files, evidence maps or reviewer-risk audits.
+
 ## Figure Planning
 
 Each main figure should answer one result question. A strong composite figure usually combines:

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960">
+<rect width="1600" height="960" fill="#F3F4F6"/>
+<rect x="55" y="55" width="650" height="390" fill="#FFFFFF" stroke="#D9DEE7" rx="6"/>
+<text x="73.0" y="89.0" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" text-anchor="start" fill="#22272E">a</text>
+<text x="105.0" y="88.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#22272E">Physiological response matrix</text>
+<text x="155.0" y="172.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="end" fill="#22272E">Wheat-A</text>
+<text x="155.0" y="214.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="end" fill="#22272E">Wheat-B</text>
+<text x="155.0" y="256.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="end" fill="#22272E">Wheat-C</text>
+<text x="155.0" y="298.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="end" fill="#22272E">Wheat-D</text>
+<text x="155.0" y="340.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="end" fill="#22272E">Wheat-E</text>
+<text x="206.0" y="127.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#66707A">Retention</text>
+<text x="268.0" y="127.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#66707A">Root</text>
+<text x="330.0" y="127.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#66707A">RWC</text>
+<text x="392.0" y="127.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#66707A">K/Na</text>
+<text x="454.0" y="127.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#66707A">MDA</text>
+<text x="516.0" y="127.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#66707A">Proline</text>
+<text x="578.0" y="127.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#66707A">SOD</text>
+<text x="640.0" y="127.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#66707A">CAT</text>
+<rect x="175.0" y="145.0" width="58" height="38" fill="#FFB3BA" rx="4"/>
+<rect x="237.0" y="145.0" width="58" height="38" fill="#FFB3BA" rx="4"/>
+<rect x="299.0" y="145.0" width="58" height="38" fill="#FFB3BA" rx="4"/>
+<rect x="361.0" y="145.0" width="58" height="38" fill="#FFB3BA" rx="4"/>
+<rect x="423.0" y="145.0" width="58" height="38" fill="#FFB3BA" rx="4"/>
+<rect x="485.0" y="145.0" width="58" height="38" fill="#FFB3BA" rx="4"/>
+<rect x="547.0" y="145.0" width="58" height="38" fill="#FFB3BA" rx="4"/>
+<rect x="609.0" y="145.0" width="58" height="38" fill="#FFB3BA" rx="4"/>
+<rect x="175.0" y="187.0" width="58" height="38" fill="#F5CBD2" rx="4"/>
+<rect x="237.0" y="187.0" width="58" height="38" fill="#F5CCD3" rx="4"/>
+<rect x="299.0" y="187.0" width="58" height="38" fill="#F6CAD0" rx="4"/>
+<rect x="361.0" y="187.0" width="58" height="38" fill="#F4CFD5" rx="4"/>
+<rect x="423.0" y="187.0" width="58" height="38" fill="#F7C6CD" rx="4"/>
+<rect x="485.0" y="187.0" width="58" height="38" fill="#F3D1D7" rx="4"/>
+<rect x="547.0" y="187.0" width="58" height="38" fill="#F6CAD0" rx="4"/>
+<rect x="609.0" y="187.0" width="58" height="38" fill="#F4CDD4" rx="4"/>
+<rect x="175.0" y="229.0" width="58" height="38" fill="#F1D5DC" rx="4"/>
+<rect x="237.0" y="229.0" width="58" height="38" fill="#EFDBE1" rx="4"/>
+<rect x="299.0" y="229.0" width="58" height="38" fill="#F0D7DE" rx="4"/>
+<rect x="361.0" y="229.0" width="58" height="38" fill="#EEDDE3" rx="4"/>
+<rect x="423.0" y="229.0" width="58" height="38" fill="#F1D5DB" rx="4"/>
+<rect x="485.0" y="229.0" width="58" height="38" fill="#EFDBE1" rx="4"/>
+<rect x="547.0" y="229.0" width="58" height="38" fill="#F0D7DD" rx="4"/>
+<rect x="609.0" y="229.0" width="58" height="38" fill="#EFDBE2" rx="4"/>
+<rect x="175.0" y="271.0" width="58" height="38" fill="#E8ECF2" rx="4"/>
+<rect x="237.0" y="271.0" width="58" height="38" fill="#E8ECF2" rx="4"/>
+<rect x="299.0" y="271.0" width="58" height="38" fill="#E8ECF2" rx="4"/>
+<rect x="361.0" y="271.0" width="58" height="38" fill="#E8ECF2" rx="4"/>
+<rect x="423.0" y="271.0" width="58" height="38" fill="#E8ECF2" rx="4"/>
+<rect x="485.0" y="271.0" width="58" height="38" fill="#E8ECF2" rx="4"/>
+<rect x="547.0" y="271.0" width="58" height="38" fill="#E8ECF2" rx="4"/>
+<rect x="609.0" y="271.0" width="58" height="38" fill="#E8ECF2" rx="4"/>
+<rect x="175.0" y="313.0" width="58" height="38" fill="#FABFC6" rx="4"/>
+<rect x="237.0" y="313.0" width="58" height="38" fill="#FAC0C6" rx="4"/>
+<rect x="299.0" y="313.0" width="58" height="38" fill="#F9C1C7" rx="4"/>
+<rect x="361.0" y="313.0" width="58" height="38" fill="#F9C3C9" rx="4"/>
+<rect x="423.0" y="313.0" width="58" height="38" fill="#FBBCC3" rx="4"/>
+<rect x="485.0" y="313.0" width="58" height="38" fill="#F8C4CB" rx="4"/>
+<rect x="547.0" y="313.0" width="58" height="38" fill="#FABEC5" rx="4"/>
+<rect x="609.0" y="313.0" width="58" height="38" fill="#FABFC6" rx="4"/>
+<rect x="755" y="55" width="790" height="390" fill="#FFFFFF" stroke="#D9DEE7" rx="6"/>
+<text x="773.0" y="89.0" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" text-anchor="start" fill="#22272E">b</text>
+<text x="805.0" y="88.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#22272E">Integrated physiology space</text>
+<line x1="880.0" y1="350" x2="880.0" y2="120" stroke="#D9DEE7" stroke-width="1"/>
+<line x1="880" y1="350.0" x2="1400" y2="350.0" stroke="#D9DEE7" stroke-width="1"/>
+<line x1="1010.0" y1="350" x2="1010.0" y2="120" stroke="#D9DEE7" stroke-width="1"/>
+<line x1="880" y1="292.5" x2="1400" y2="292.5" stroke="#D9DEE7" stroke-width="1"/>
+<line x1="1140.0" y1="350" x2="1140.0" y2="120" stroke="#D9DEE7" stroke-width="1"/>
+<line x1="880" y1="235.0" x2="1400" y2="235.0" stroke="#D9DEE7" stroke-width="1"/>
+<line x1="1270.0" y1="350" x2="1270.0" y2="120" stroke="#D9DEE7" stroke-width="1"/>
+<line x1="880" y1="177.5" x2="1400" y2="177.5" stroke="#D9DEE7" stroke-width="1"/>
+<line x1="1400.0" y1="350" x2="1400.0" y2="120" stroke="#D9DEE7" stroke-width="1"/>
+<line x1="880" y1="120.0" x2="1400" y2="120.0" stroke="#D9DEE7" stroke-width="1"/>
+<circle cx="1315.1" cy="120.0" r="22" fill="#FFB3BA" stroke="white" stroke-width="4"/>
+<text x="1343.1" y="125.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#22272E">Wheat-A</text>
+<circle cx="1226.7" cy="219.8" r="22" fill="#BAE1FF" stroke="white" stroke-width="4"/>
+<text x="1254.7" y="224.8" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#22272E">Wheat-B</text>
+<circle cx="1189.8" cy="273.8" r="22" fill="#BAFFC9" stroke="white" stroke-width="4"/>
+<text x="1217.8" y="278.8" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#22272E">Wheat-C</text>
+<circle cx="1106.1" cy="350.0" r="22" fill="#FFD59E" stroke="white" stroke-width="4"/>
+<text x="1134.1" y="355.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#22272E">Wheat-D</text>
+<circle cx="1270.0" cy="173.1" r="22" fill="#D7C7FF" stroke="white" stroke-width="4"/>
+<text x="1298.0" y="178.1" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#22272E">Wheat-E</text>
+<text x="1140.0" y="395.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#66707A">Germination retention (%)</text>
+<text x="825.0" y="235.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#66707A">Physiology index</text>
+<rect x="220" y="510" width="1160" height="360" fill="#FFFFFF" stroke="#D9DEE7" rx="6"/>
+<text x="238.0" y="544.0" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" text-anchor="start" fill="#22272E">c</text>
+<text x="270.0" y="543.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#22272E">Ranked physiological composite under salt treatment</text>
+<rect x="350" y="625" width="700.0" height="28" rx="4" fill="#FFB3BA"/>
+<text x="325.0" y="645.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#22272E">Wheat-A</text>
+<text x="1062.0" y="645.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#22272E">100.0</text>
+<rect x="350" y="670" width="540.6" height="28" rx="4" fill="#D7C7FF"/>
+<text x="325.0" y="690.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#22272E">Wheat-E</text>
+<text x="902.6" y="690.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#22272E">77.2</text>
+<rect x="350" y="715" width="396.3" height="28" rx="4" fill="#BAE1FF"/>
+<text x="325.0" y="735.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#22272E">Wheat-B</text>
+<text x="758.3" y="735.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#22272E">56.6</text>
+<rect x="350" y="760" width="235.7" height="28" rx="4" fill="#BAFFC9"/>
+<text x="325.0" y="780.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#22272E">Wheat-C</text>
+<text x="597.7" y="780.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#22272E">33.7</text>
+<rect x="350" y="805" width="5.0" height="28" rx="4" fill="#D9DEE7"/>
+<text x="325.0" y="825.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="end" fill="#22272E">Wheat-D</text>
+<text x="362.0" y="825.0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#22272E">0.0</text>
+</svg>

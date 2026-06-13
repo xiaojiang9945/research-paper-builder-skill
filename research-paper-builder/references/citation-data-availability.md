@@ -33,6 +33,35 @@ Before delivery:
 - no reference-paper examples are cited merely because they were used for style matching;
 - citation style matches the target journal.
 
+## Nature-Style Reference Pattern
+
+When the target is Nature or a Nature-family journal and no journal-specific override is provided, use numbered citations and a compact reference list.
+
+Text citations:
+- use sequential numbered citations;
+- in Markdown drafts, represent Nature-style superscript citations as `<sup>1</sup>` or `<sup>1,2</sup>`;
+- keep citation numbers outside punctuation only if the target journal requires it; otherwise follow the journal example exactly.
+
+Reference-list pattern:
+
+```text
+1. Author, A. A. & Author, B. B. Article title in sentence case. Journal Abbrev. volume, pages (year).
+```
+
+For Markdown drafts, preserve visual structure:
+
+```markdown
+1. Author, A. A. & Author, B. B. Article title in sentence case. *Journal Abbrev.* **59**, 651-681 (2008).
+```
+
+Checks:
+- include article titles;
+- use abbreviated journal titles when required by the journal;
+- bold the volume number in Markdown when preparing a readable draft;
+- include page range or article number;
+- include year in parentheses;
+- do not invent DOI, issue, volume or page metadata.
+
 ## Data Availability
 
 Draft the statement around actual access paths:

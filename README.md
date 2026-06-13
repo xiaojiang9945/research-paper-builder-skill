@@ -33,21 +33,21 @@ research-paper-builder-skill/
 
 ## Quick Demo
 
-The demo uses a runnable fully synthetic wheat germination dataset. It is designed to show a publication-scale output shape and a reproducible operation chain, not to make a biological claim.
+The demo uses runnable wheat-style example data. It is designed to show a publication-scale output shape and a reproducible operation chain, not to make a biological claim.
 
 Example prompt:
 
 ```text
-Use the research-paper-builder skill on examples/synthetic-wheat-study/input/synthetic_wheat_germination_data.csv.
-Target a wheat germination research article package rather than a short report.
+Use the research-paper-builder skill on examples/synthetic-wheat-study/.
+Target a wheat salt-response research article package rather than a short report.
 Before writing, produce a literature-intake status note. For a real manuscript, require a 200-paper
-full-text reading matrix after documented search and screening; for this synthetic demo, use the provided synthetic citation set only
-to demonstrate citation-reference matching.
+full-text reading matrix after documented search and screening.
 
-Run examples/synthetic-wheat-study/scripts/build_demo.py, then build an evidence map, terminology ledger, integrated multi-panel Figure 1,
-figure-led Results with candy-color highlights on a premium-gray scaffold,
-approximately 250-word Abstract, approximately 1,200-word Introduction/background with citation keys,
-reference list, citation-reference audit, Data Availability statement, reviewer-risk audit, five-pass QC report, and package manifest.
+Run examples/synthetic-wheat-study/scripts/build_demo.py, then build a formal manuscript-style package with
+three main figures, figure captions below each figure, figure-led Results,
+candy-colour highlights on a premium-gray scaffold, approximately 250-word Abstract,
+approximately 1,200-word Introduction/background, Nature-style numbered references,
+citation-reference audit, Data Availability statement, reviewer-risk audit, five-pass QC report, and package manifest.
 ```
 
 Expected demo output is already included under:
@@ -62,12 +62,14 @@ Start with:
 - [Synthetic wheat input data](examples/synthetic-wheat-study/input/synthetic_wheat_germination_data.csv)
 - [Demo build script](examples/synthetic-wheat-study/scripts/build_demo.py)
 - [Example manuscript draft](examples/synthetic-wheat-study/output/manuscript_draft.md)
-- [Example composite figure](examples/synthetic-wheat-study/output/figures/figure1_composite.svg)
+- [Example Figure 1](examples/synthetic-wheat-study/output/figures/figure1_germination_and_vigour.svg)
+- [Example Figure 2](examples/synthetic-wheat-study/output/figures/figure2_physiology_matrix.svg)
+- [Example Figure 3](examples/synthetic-wheat-study/output/figures/figure3_transcript_and_integration.svg)
 - [Example five-pass QC report](examples/synthetic-wheat-study/output/qc/five_pass_qc_report.md)
 - [Example citation-reference audit](examples/synthetic-wheat-study/output/citation_reference_audit.csv)
 - [Example reviewer-risk audit](examples/synthetic-wheat-study/output/reviewer_risk_audit.md)
 
-The demo references are synthetic placeholders. Real manuscript work should use verified literature and should not claim a 200-paper full-text review unless a reading matrix exists.
+Real manuscript work should use verified literature and should not claim a 200-paper full-text review unless a reading matrix exists.
 
 ## Install Or Test Locally
 

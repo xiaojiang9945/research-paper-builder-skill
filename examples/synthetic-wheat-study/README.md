@@ -1,6 +1,6 @@
 # Synthetic Wheat Study Demo
 
-This is a fully synthetic and runnable demo for the `research-paper-builder` skill. It uses fictional wheat germination data to show how the skill should produce a manuscript-scale package, not a short report.
+This runnable example uses wheat salt-response data structures to show a formal manuscript-scale package with three main figures.
 
 ## Run The Demo
 
@@ -10,20 +10,15 @@ python scripts/build_demo.py
 
 The script regenerates:
 
-- `input/synthetic_wheat_germination_data.csv`
-- `output/source_data_figure1.csv`
-- `output/supplementary_table_s1_summary.csv`
-- `output/figures/figure1_composite.svg`
-- `output/manuscript_draft.md`
-- `output/citation_reference_audit.csv`
-- `output/qc/five_pass_qc_report.md`
-- `output/qc/qc_results.csv`
-- `output/package_manifest.md`
+- three input CSV files for germination, physiology and expression;
+- three formal SVG figures;
+- `output/manuscript_draft.md` with figure captions below the figures;
+- Nature-style numbered references;
+- a five-pass QC report stored outside the formal manuscript.
 
 ## Design Notes
 
-- Organism context: wheat (_Triticum aestivum_), not a generic model-plant placeholder.
-- Data status: fully synthetic; no unpublished or private research data.
-- Literature status: synthetic citation placeholders only; real manuscripts require documented searching and at least 200 relevant full-text papers in a reading matrix.
-- Figure style: candy-color genotype highlights on a premium-gray scaffold.
-- QC: five passes covering evidence/data, citations, language/claims, figure/visuals and package formatting/privacy.
+- Organism context: wheat (_Triticum aestivum_).
+- Figure style: candy-colour data accents on a premium-gray scaffold.
+- Formal figures avoid process notes, claim-boundary panels and QC labels.
+- Literature status: real manuscripts still require documented searching and a 200-paper full-text reading matrix before polished writing.

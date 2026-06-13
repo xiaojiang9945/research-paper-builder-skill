@@ -16,6 +16,16 @@ import numpy as np
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.gridspec import GridSpec
 
+try:
+    import cartopy.crs as ccrs
+    import cartopy.feature as cfeature
+
+    CARTOPY_AVAILABLE = True
+except Exception:
+    ccrs = None
+    cfeature = None
+    CARTOPY_AVAILABLE = False
+
 
 ROOT = Path(__file__).resolve().parents[1]
 INPUT_DIR = ROOT / "input"
@@ -155,18 +165,18 @@ def configure_matplotlib() -> None:
             "savefig.facecolor": WHITE,
             "savefig.edgecolor": WHITE,
             "font.family": "DejaVu Sans",
-            "font.size": 7,
-            "axes.labelsize": 7,
-            "axes.titlesize": 8,
-            "xtick.labelsize": 6,
-            "ytick.labelsize": 6,
-            "legend.fontsize": 6,
+            "font.size": 8.5,
+            "axes.labelsize": 8.5,
+            "axes.titlesize": 9,
+            "xtick.labelsize": 7.5,
+            "ytick.labelsize": 7.5,
+            "legend.fontsize": 7,
             "axes.edgecolor": EDGE,
             "axes.labelcolor": INK,
             "xtick.color": MUTED,
             "ytick.color": MUTED,
             "grid.color": GRID,
-            "grid.linewidth": 0.55,
+            "grid.linewidth": 0.7,
             "svg.fonttype": "none",
         }
     )
@@ -444,17 +454,17 @@ def style_axes(ax: plt.Axes, grid: bool = True) -> None:
     ax.set_facecolor(WHITE)
     for spine in ax.spines.values():
         spine.set_color(EDGE)
-        spine.set_linewidth(0.7)
-    ax.tick_params(colors=MUTED, width=0.6, length=2.5)
+        spine.set_linewidth(0.9)
+    ax.tick_params(colors=MUTED, width=0.75, length=3.2)
     if grid:
-        ax.grid(True, color=GRID, linewidth=0.55, zorder=0)
+        ax.grid(True, color=GRID, linewidth=0.7, zorder=0)
 
 
 def panel_label(ax: plt.Axes, label: str, is_3d: bool = False) -> None:
     if is_3d:
-        ax.text2D(-0.10, 1.03, label, transform=ax.transAxes, fontsize=11, fontweight="bold", color=INK)
+        ax.text2D(-0.10, 1.04, label, transform=ax.transAxes, fontsize=13, fontweight="bold", color=INK)
     else:
-        ax.text(-0.10, 1.03, label, transform=ax.transAxes, fontsize=11, fontweight="bold", color=INK, va="top")
+        ax.text(-0.10, 1.04, label, transform=ax.transAxes, fontsize=13, fontweight="bold", color=INK, va="top")
 
 
 def save_figure(fig: plt.Figure, path: Path) -> None:
@@ -463,80 +473,72 @@ def save_figure(fig: plt.Figure, path: Path) -> None:
     plt.close(fig)
 
 
-def fill_mollweide_land(ax: plt.Axes) -> None:
-    polygons = [
-        [(-168, 15), (-140, 55), (-95, 72), (-55, 50), (-60, 15), (-95, 5), (-130, 10)],
-        [(-82, 12), (-70, -5), (-64, -25), (-72, -55), (-54, -52), (-38, -22), (-50, 5)],
-        [(-10, 35), (15, 70), (55, 55), (62, 22), (42, -35), (20, -35), (5, 10)],
-        [(25, 38), (70, 62), (145, 55), (150, 20), (110, 5), (90, -10), (42, 0)],
-        [(110, -10), (154, -14), (152, -42), (118, -42), (106, -25)],
-        [(-8, 36), (35, 36), (45, 10), (28, -35), (8, -25), (-15, 5)],
-    ]
-    for poly in polygons:
-        lon = np.radians([p[0] for p in poly])
-        lat = np.radians([p[1] for p in poly])
-        ax.fill(lon, lat, facecolor="#F8F9FB", edgecolor=EDGE, linewidth=0.5, zorder=1)
+def require_cartopy() -> None:
+    if not CARTOPY_AVAILABLE:
+        raise RuntimeError(
+            "Cartopy is required for the map panels. Install it with `python -m pip install cartopy` "
+            "or replace the map panels with another validated geospatial package."
+        )
 
-
-def draw_china_outline(ax: plt.Axes) -> None:
-    outline = np.array(
-        [
-            [73, 39],
-            [80, 48],
-            [94, 49],
-            [104, 53],
-            [121, 49],
-            [134, 47],
-            [130, 40],
-            [122, 35],
-            [123, 29],
-            [116, 22],
-            [108, 19],
-            [99, 22],
-            [92, 28],
-            [82, 30],
-            [73, 39],
-        ],
-        dtype=float,
-    )
-    ax.fill(outline[:, 0], outline[:, 1], color="#F8F9FB", ec=EDGE, lw=0.7, zorder=1)
 
 
 def make_figure1(summary: dict[str, object]) -> None:
+    require_cartopy()
     metrics: dict[str, dict[str, float]] = summary["metrics"]  # type: ignore[assignment]
     raw_germination: list[dict[str, object]] = summary["raw_germination"]  # type: ignore[assignment]
     distribution: list[dict[str, object]] = summary["distribution"]  # type: ignore[assignment]
     time_rows: list[dict[str, object]] = summary["time"]  # type: ignore[assignment]
 
-    fig = plt.figure(figsize=(11.2, 7.2), facecolor=WHITE)
+    fig = plt.figure(figsize=(12.0, 7.7), facecolor=WHITE)
     gs = GridSpec(2, 3, figure=fig, left=0.055, right=0.985, top=0.965, bottom=0.075, wspace=0.28, hspace=0.34)
 
-    ax = fig.add_subplot(gs[0, 0], projection="mollweide")
+    ax = fig.add_subplot(gs[0, 0], projection=ccrs.Robinson())  # type: ignore[union-attr]
+    ax.set_global()
     ax.set_facecolor(WHITE)
-    fill_mollweide_land(ax)
+    ax.add_feature(cfeature.LAND.with_scale("110m"), facecolor="#F8F9FB", edgecolor=EDGE, linewidth=0.65, zorder=1)  # type: ignore[union-attr]
+    ax.add_feature(cfeature.COASTLINE.with_scale("110m"), edgecolor=EDGE, linewidth=0.55, zorder=2)  # type: ignore[union-attr]
+    ax.gridlines(crs=ccrs.PlateCarree(), linewidth=0.55, color=GRID, alpha=0.95, linestyle="-")  # type: ignore[union-attr]
     for region, color in REGION_COLORS.items():
         pts = [r for r in distribution if r["region"] == region]
         if pts:
             ax.scatter(
-                np.radians([float(p["lon"]) for p in pts]),
-                np.radians([float(p["lat"]) for p in pts]),
-                s=[float(p["accessions"]) * 2.4 for p in pts],
+                [float(p["lon"]) for p in pts],
+                [float(p["lat"]) for p in pts],
+                s=[float(p["accessions"]) * 2.8 for p in pts],
                 c=color,
                 edgecolor=WHITE,
-                linewidth=0.6,
-                alpha=0.92,
+                linewidth=0.95,
+                alpha=0.94,
                 label=region,
-                zorder=3,
+                zorder=4,
+                transform=ccrs.PlateCarree(),  # type: ignore[union-attr]
             )
-    ax.grid(True, color=GRID, linewidth=0.45)
-    ax.set_xticklabels([])
-    ax.set_yticklabels([])
     ax.legend(frameon=False, loc="lower left", bbox_to_anchor=(-0.06, -0.08), ncol=1, handletextpad=0.3)
     panel_label(ax, "a")
 
-    ax = fig.add_subplot(gs[0, 1])
-    style_axes(ax)
-    draw_china_outline(ax)
+    ax = fig.add_subplot(
+        gs[0, 1],
+        projection=ccrs.LambertConformal(central_longitude=105, central_latitude=35),  # type: ignore[union-attr]
+    )
+    ax.set_extent([72, 135, 17, 54], crs=ccrs.PlateCarree())  # type: ignore[union-attr]
+    ax.set_facecolor(WHITE)
+    ax.add_feature(cfeature.LAND.with_scale("50m"), facecolor="#F8F9FB", edgecolor=EDGE, linewidth=0.65, zorder=1)  # type: ignore[union-attr]
+    ax.add_feature(cfeature.BORDERS.with_scale("50m"), edgecolor="#9EA6B0", linewidth=0.55, zorder=2)  # type: ignore[union-attr]
+    ax.add_feature(cfeature.COASTLINE.with_scale("50m"), edgecolor="#9EA6B0", linewidth=0.55, zorder=2)  # type: ignore[union-attr]
+    gl = ax.gridlines(
+        crs=ccrs.PlateCarree(),  # type: ignore[union-attr]
+        draw_labels=True,
+        linewidth=0.55,
+        color=GRID,
+        alpha=0.95,
+        linestyle="-",
+        x_inline=False,
+        y_inline=False,
+    )
+    gl.top_labels = False
+    gl.right_labels = False
+    gl.xlabel_style = {"size": 7.5, "color": MUTED}
+    gl.ylabel_style = {"size": 7.5, "color": MUTED}
     china_pts = [r for r in distribution if r["country"] == "China"]
     for region, color in REGION_COLORS.items():
         pts = [r for r in china_pts if r["region"] == region]
@@ -544,17 +546,14 @@ def make_figure1(summary: dict[str, object]) -> None:
             ax.scatter(
                 [float(p["lon"]) for p in pts],
                 [float(p["lat"]) for p in pts],
-                s=[float(p["accessions"]) * 4.0 for p in pts],
+                s=[float(p["accessions"]) * 4.8 for p in pts],
                 c=color,
                 edgecolor=WHITE,
-                linewidth=0.7,
-                alpha=0.95,
+                linewidth=1.0,
+                alpha=0.96,
                 zorder=4,
+                transform=ccrs.PlateCarree(),  # type: ignore[union-attr]
             )
-    ax.set_xlim(72, 136)
-    ax.set_ylim(17, 54)
-    ax.set_xlabel("Longitude")
-    ax.set_ylabel("Latitude")
     panel_label(ax, "b")
 
     ax = fig.add_subplot(gs[0, 2])
@@ -564,9 +563,9 @@ def make_figure1(summary: dict[str, object]) -> None:
         x = [int(r["day"]) for r in rows]
         y = [float(r["germination_mean_pct"]) for r in rows]
         err = [float(r["germination_sd_pct"]) for r in rows]
-        ax.plot(x, y, color=GENOTYPE_COLORS[genotype], lw=1.8, marker="o", ms=3.2)
+        ax.plot(x, y, color=GENOTYPE_COLORS[genotype], lw=2.4, marker="o", ms=4.2)
         ax.fill_between(x, np.array(y) - np.array(err), np.array(y) + np.array(err), color=GENOTYPE_COLORS[genotype], alpha=0.16, lw=0)
-        ax.text(x[-1] + 0.08, y[-1], genotype[-1], color=GENOTYPE_COLORS[genotype], va="center", fontsize=7, fontweight="bold")
+        ax.text(x[-1] + 0.08, y[-1], genotype[-1], color=GENOTYPE_COLORS[genotype], va="center", fontsize=8.5, fontweight="bold")
     ax.set_xlim(1, 7.45)
     ax.set_ylim(0, 100)
     ax.set_xlabel("Days after sowing")
@@ -586,17 +585,19 @@ def make_figure1(summary: dict[str, object]) -> None:
     for patch in bp1["boxes"]:
         patch.set_facecolor(CONTROL)
         patch.set_edgecolor("#8B949E")
+        patch.set_linewidth(1.0)
     for patch, genotype in zip(bp2["boxes"], GENOTYPES):
         patch.set_facecolor(GENOTYPE_COLORS[genotype])
         patch.set_edgecolor("#8B949E")
+        patch.set_linewidth(1.0)
     for artist in bp1["medians"] + bp2["medians"]:
         artist.set_color(INK)
-        artist.set_linewidth(0.9)
+        artist.set_linewidth(1.2)
     ax.set_xticks(positions, [g.replace("Wheat-", "") for g in GENOTYPES])
     ax.set_ylim(30, 104)
     ax.set_ylabel("Day 7 germination (%)")
-    ax.plot([], [], color=CONTROL, lw=6, label="Control")
-    ax.plot([], [], color=GENOTYPE_COLORS["Wheat-A"], lw=6, label="NaCl")
+    ax.plot([], [], color=CONTROL, lw=7, label="Control")
+    ax.plot([], [], color=GENOTYPE_COLORS["Wheat-A"], lw=7, label="NaCl")
     ax.legend(frameon=False, loc="lower left", handlelength=1.0)
     panel_label(ax, "d")
 
@@ -610,21 +611,21 @@ def make_figure1(summary: dict[str, object]) -> None:
             s=size,
             c=GENOTYPE_COLORS[genotype],
             edgecolor=WHITE,
-            linewidth=0.8,
+            linewidth=1.0,
             alpha=0.96,
         )
-        ax.text(metrics[genotype]["retention_pct"] + 1.2, metrics[genotype]["vigor_index"], genotype[-1], color=INK, va="center", fontsize=7, fontweight="bold")
+        ax.text(metrics[genotype]["retention_pct"] + 1.2, metrics[genotype]["vigor_index"], genotype[-1], color=INK, va="center", fontsize=8.5, fontweight="bold")
     ax.set_xlabel("Germination retention (%)")
     ax.set_ylabel("Seedling vigour index")
     panel_label(ax, "e")
 
     ax = fig.add_subplot(gs[1, 2], projection="polar")
     ax.set_facecolor(WHITE)
-    ax.grid(True, color=GRID, linewidth=0.55)
+    ax.grid(True, color=GRID, linewidth=0.75)
     score = [metrics[g]["integrated_score"] for g in GENOTYPES]
     theta = np.linspace(0, 2 * np.pi, len(GENOTYPES), endpoint=False)
     widths = np.full(len(GENOTYPES), 2 * np.pi / len(GENOTYPES) * 0.72)
-    ax.bar(theta, score, width=widths, color=[GENOTYPE_COLORS[g] for g in GENOTYPES], edgecolor=WHITE, linewidth=1.0, alpha=0.95)
+    ax.bar(theta, score, width=widths, color=[GENOTYPE_COLORS[g] for g in GENOTYPES], edgecolor=WHITE, linewidth=1.2, alpha=0.95)
     ax.set_ylim(0, 100)
     ax.set_xticks(theta, [g.replace("Wheat-", "") for g in GENOTYPES])
     ax.set_yticks([25, 50, 75, 100])
@@ -639,7 +640,7 @@ def make_figure2(summary: dict[str, object]) -> None:
     raw_physiology: list[dict[str, object]] = summary["raw_physiology"]  # type: ignore[assignment]
     scaled_traits: dict[str, dict[str, float]] = summary["scaled_traits"]  # type: ignore[assignment]
 
-    fig = plt.figure(figsize=(11.2, 7.2), facecolor=WHITE)
+    fig = plt.figure(figsize=(12.0, 7.7), facecolor=WHITE)
     gs = GridSpec(2, 3, figure=fig, left=0.055, right=0.985, top=0.965, bottom=0.075, wspace=0.30, hspace=0.35)
 
     trait_labels = [
@@ -675,7 +676,7 @@ def make_figure2(summary: dict[str, object]) -> None:
             s=[38 + float(r["proline_umol_g_fw"]) * 18 for r in pts],
             c=GENOTYPE_COLORS[genotype],
             edgecolor=WHITE,
-            linewidth=0.7,
+            linewidth=0.95,
             alpha=0.88,
             label=genotype[-1],
         )
@@ -691,15 +692,16 @@ def make_figure2(summary: dict[str, object]) -> None:
     for body, genotype in zip(violin["bodies"], GENOTYPES):
         body.set_facecolor(GENOTYPE_COLORS[genotype])
         body.set_edgecolor("#8B949E")
+        body.set_linewidth(0.9)
         body.set_alpha(0.72)
     bp = ax.boxplot(mda, positions=np.arange(len(GENOTYPES)), widths=0.24, patch_artist=True, showfliers=False)
     for patch in bp["boxes"]:
         patch.set_facecolor(WHITE)
         patch.set_edgecolor(INK)
-        patch.set_linewidth(0.7)
+        patch.set_linewidth(1.0)
     for artist in bp["medians"]:
         artist.set_color(INK)
-        artist.set_linewidth(1.0)
+        artist.set_linewidth(1.25)
     ax.set_xticks(np.arange(len(GENOTYPES)), [g.replace("Wheat-", "") for g in GENOTYPES])
     ax.set_ylabel("MDA (nmol g-1 FW)")
     panel_label(ax, "c")
@@ -715,7 +717,7 @@ def make_figure2(summary: dict[str, object]) -> None:
     for x0, y0 in zip(xs, ys):
         zz += np.exp(-((xx - x0) ** 2 / (2 * 3.6**2) + (yy - y0) ** 2 / (2 * 0.12**2)))
     contour = ax.contourf(xx, yy, zz, levels=12, cmap=SURFACE_CMAP, alpha=0.96)
-    ax.contour(xx, yy, zz, levels=6, colors=WHITE, linewidths=0.45, alpha=0.75)
+    ax.contour(xx, yy, zz, levels=6, colors=WHITE, linewidths=0.65, alpha=0.78)
     fig.colorbar(contour, ax=ax, fraction=0.046, pad=0.02).ax.tick_params(labelsize=6)
     ax.set_xlabel("Relative water content (%)")
     ax.set_ylabel("K/Na ratio")
@@ -732,7 +734,7 @@ def make_figure2(summary: dict[str, object]) -> None:
     ]
     left = np.zeros(len(GENOTYPES))
     for label, values, color in components:
-        ax.barh(y_pos, values, left=left, height=0.62, color=color, edgecolor=WHITE, label=label)
+        ax.barh(y_pos, values, left=left, height=0.64, color=color, edgecolor=WHITE, linewidth=1.0, label=label)
         left += np.array(values)
     ax.set_yticks(y_pos, [g.replace("Wheat-", "") for g in GENOTYPES])
     ax.set_xlabel("Scaled component total")
@@ -765,7 +767,7 @@ def make_figure3(summary: dict[str, object]) -> None:
     domain_scores: list[dict[str, object]] = summary["domain_scores"]  # type: ignore[assignment]
 
     genes = sorted({str(r["gene"]) for r in expression})
-    fig = plt.figure(figsize=(11.2, 7.2), facecolor=WHITE)
+    fig = plt.figure(figsize=(12.0, 7.7), facecolor=WHITE)
     gs = GridSpec(2, 3, figure=fig, left=0.055, right=0.985, top=0.965, bottom=0.075, wspace=0.31, hspace=0.36)
 
     ax = fig.add_subplot(gs[0, 0])
@@ -785,8 +787,8 @@ def make_figure3(summary: dict[str, object]) -> None:
         xvals = np.array([metrics[genotype][f"{gene}_log2fc"] for gene in genes])
         pseudo_p = np.clip(np.exp(-1.25 * xvals) * rng.uniform(0.35, 0.75, len(xvals)), 0.0008, 0.25)
         yvals = -np.log10(pseudo_p)
-        ax.scatter(xvals, yvals, s=34 + 18 * xvals, c=GENOTYPE_COLORS[genotype], edgecolor=WHITE, linewidth=0.7, alpha=0.90, label=genotype[-1])
-    ax.axhline(-math.log10(0.05), color=EDGE, lw=0.8, ls="--")
+        ax.scatter(xvals, yvals, s=40 + 22 * xvals, c=GENOTYPE_COLORS[genotype], edgecolor=WHITE, linewidth=0.95, alpha=0.91, label=genotype[-1])
+    ax.axhline(-math.log10(0.05), color=EDGE, lw=1.0, ls="--")
     ax.set_xlabel("Mean log2 fold change")
     ax.set_ylabel("-log10 adjusted P")
     ax.legend(frameon=False, ncol=3, loc="upper left", handletextpad=0.2, columnspacing=0.6)
@@ -801,10 +803,11 @@ def make_figure3(summary: dict[str, object]) -> None:
     for patch, color in zip(bp["boxes"], box_colors):
         patch.set_facecolor(color)
         patch.set_edgecolor("#8B949E")
+        patch.set_linewidth(1.0)
         patch.set_alpha(0.86)
     for artist in bp["medians"]:
         artist.set_color(INK)
-        artist.set_linewidth(1.0)
+        artist.set_linewidth(1.25)
     ax.set_xticks(np.arange(len(focus_genes)), focus_genes, rotation=35, ha="right")
     ax.set_ylabel("Log2 fold change")
     panel_label(ax, "c")
@@ -838,12 +841,12 @@ def make_figure3(summary: dict[str, object]) -> None:
     style_axes(ax)
     ranked = sorted(domain_scores, key=lambda r: float(r["integrated_score"]))
     y = np.arange(len(ranked))
-    ax.barh(y, [float(r["integrated_score"]) for r in ranked], color=[GENOTYPE_COLORS[str(r["genotype"])] for r in ranked], edgecolor=WHITE, height=0.66)
+    ax.barh(y, [float(r["integrated_score"]) for r in ranked], color=[GENOTYPE_COLORS[str(r["genotype"])] for r in ranked], edgecolor=WHITE, linewidth=1.0, height=0.68)
     ax.set_yticks(y, [str(r["genotype"]).replace("Wheat-", "") for r in ranked])
     ax.set_xlabel("Integrated response score")
     ax.set_xlim(0, 104)
     for yi, row in zip(y, ranked):
-        ax.text(float(row["integrated_score"]) + 1.2, yi, f"{float(row['integrated_score']):.1f}", va="center", fontsize=6, color=INK)
+        ax.text(float(row["integrated_score"]) + 1.2, yi, f"{float(row['integrated_score']):.1f}", va="center", fontsize=7.5, color=INK)
     panel_label(ax, "e")
 
     ax = fig.add_subplot(gs[1, 2], projection="3d")
@@ -860,7 +863,7 @@ def make_figure3(summary: dict[str, object]) -> None:
             s=38,
             c=GENOTYPE_COLORS[genotype],
             edgecolor=INK,
-            linewidth=0.25,
+            linewidth=0.45,
         )
     ax.view_init(elev=27, azim=-54)
     ax.set_xlabel("Physiology", labelpad=-1)
@@ -888,6 +891,8 @@ def make_manuscript(summary: dict[str, object]) -> str:
 ## Abstract
 
 Soil salinity constrains wheat establishment, yet early-stage screening often depends on a small number of endpoint traits that do not show whether a candidate line combines germination, growth, water status, ion balance, oxidative protection and molecular response. We evaluated six wheat lines under control and NaCl treatment using a staged analysis that links seed germination, seedling vigour, physiological traits, transcript markers and sampling geography. Regional metadata placed the panel within northern, northwestern, Yangtze and international wheat contexts, allowing the primary phenotype to be interpreted against a defined resource background. NaCl treatment separated the panel by Day 7, with Wheat-A maintaining {metrics["Wheat-A"]["NaCl-150mM_germination"]:.1f}% germination and Wheat-E maintaining {metrics["Wheat-E"]["NaCl-150mM_germination"]:.1f}%, compared with {metrics["Wheat-D"]["NaCl-150mM_germination"]:.1f}% for the weakest line. The same ranking was supported by seedling-vigour analysis, relative water content, K/Na ratio, lipid-peroxidation penalty, proline accumulation and antioxidant activity. Transcript abundance for transporter, osmoprotection, antioxidant and stress-marker genes further separated the strongest and weakest response classes. An integrated score placed {ranked[0]} first and {ranked[1]} second, identifying them as priority materials for independent validation. The study structure shows how a wheat salt-response manuscript can use a compact figure sequence to connect geographic sampling, phenotype, physiology and transcript evidence while limiting inference to early-stage prioritization. The results support a follow-up strategy in which candidate lines are advanced because multiple evidence classes converge, not because a single germination endpoint is favourable.
+
+**Keywords:** wheat; salinity; germination; seedling vigour; ion balance; transcript markers; geographic distribution
 
 ## Introduction
 
@@ -917,7 +922,7 @@ Physiological profiling showed that the strongest germination lines also maintai
 
 ### Transcript markers and integrated scoring prioritized two validation candidates
 
-Salt-responsive transcript abundance separated the wheat panel across transporter, osmoprotection, antioxidant and stress-marker genes (Fig. 3a). Wheat-A had the strongest combined induction profile, including higher values for TaHKT1;5, TaP5CS, TaSOD, TaCAT, TaDREB2 and TaLEA, while Wheat-D had the weakest profile (Fig. 3a-c). The transcript scatter panel showed that the strongest log2 fold changes were concentrated in the lines already favoured by germination and physiology, supporting a consistent cross-domain ranking (Fig. 3b). Correlation analysis showed positive alignment among germination retention, root growth, RWC, K/Na ratio, proline, SOD, transcript score and seedling vigour (Fig. 3d). Integrated scoring ranked Wheat-A first at {metrics["Wheat-A"]["integrated_score"]:.1f}, Wheat-E second at {metrics["Wheat-E"]["integrated_score"]:.1f} and Wheat-D last at {metrics["Wheat-D"]["integrated_score"]:.1f} (Fig. 3e). A three-dimensional response surface placed the strongest lines in the region where physiological and transcript scores were jointly high (Fig. 3f). Together, the transcript and integration analyses support Wheat-A and Wheat-E as priority lines for independent validation under expanded salinity conditions.
+Salt-responsive transcript abundance separated the wheat panel across transporter, osmoprotection, antioxidant and stress-marker genes (Fig. 3a). Wheat-A had the strongest combined induction profile, including higher values for TaHKT1;5, TaP5CS, TaSOD, TaCAT, TaDREB2 and TaLEA, while Wheat-D had the weakest profile (Fig. 3a-c). The transcript scatter panel showed that the strongest log2 fold changes were concentrated in the lines already favoured by germination and physiology, supporting a consistent cross-domain ranking (Fig. 3b). Correlation analysis showed positive alignment among germination retention, root growth, RWC, K/Na ratio, proline, transcript score and seedling vigour, with MDA moving in the opposite direction as expected for a damage indicator (Fig. 3d). Integrated scoring ranked Wheat-A first at {metrics["Wheat-A"]["integrated_score"]:.1f}, Wheat-E second at {metrics["Wheat-E"]["integrated_score"]:.1f} and Wheat-D last at {metrics["Wheat-D"]["integrated_score"]:.1f} (Fig. 3e). A three-dimensional response surface placed the strongest lines in the region where physiological and transcript scores were jointly high (Fig. 3f). Together, the transcript and integration analyses support Wheat-A and Wheat-E as priority lines for independent validation under expanded salinity conditions.
 
 ![Figure 3](figures/figure3_transcript_and_integration.svg)
 *Figure 3 | Transcript response and cross-domain integration. (a) Salt-induced transcript abundance for transporter, osmoprotection, antioxidant and stress-marker genes. Values are mean log2 fold change relative to control. (b) Transcript effect-size panel using mean log2 fold change and adjusted significance scale. (c) Distribution of selected marker-gene responses across biological replicates. (d) Cross-domain correlation matrix for phenotypic, physiological and transcript indicators. (e) Integrated response score for each wheat line. (f) Response surface linking physiological score, transcript score and integrated prioritization.*
@@ -1016,11 +1021,11 @@ For real high-ambition manuscripts, the writing gate remains:
     (OUTPUT_DIR / "figure_plan.md").write_text(
         """# Figure Plan
 
-| figure | formal result question | panels |
-|---|---|---|
-| Figure 1 | Which wheat lines maintain germination and early vigour, and where do accession sources sit geographically? | world distribution; China distribution; salt trajectory; endpoint boxplots; vigour scatter; polar integrated score |
-| Figure 2 | Does physiology support the germination ranking? | physiological matrix; RWC-K/Na scatter; MDA violin/box; 2D density field; component score bars; response surface |
-| Figure 3 | Do transcript markers and cross-domain integration prioritize the same lines? | transcript heatmap; transcript effect-size panel; marker boxplots; correlation matrix; integrated rank; response surface |
+| figure | formal result question | panels | data reason |
+|---|---|---|---|
+| Figure 1 | Which wheat lines maintain germination and early vigour, and where do accession sources sit geographically? | world distribution; China distribution; salt trajectory; endpoint boxplots; vigour scatter; polar integrated score | coordinate metadata, daily germination, replicate endpoint distributions and computed domain scores |
+| Figure 2 | Does physiology support the germination ranking? | physiological matrix; RWC-K/Na scatter; MDA violin/box; 2D density field; component score bars; response surface | measured physiological traits, replicate-level distributions and paired continuous water-ion variables |
+| Figure 3 | Do transcript markers and cross-domain integration prioritize the same lines? | transcript heatmap; transcript effect-size panel; marker boxplots; correlation matrix; integrated rank; response surface | gene-by-line expression matrix, replicate marker distributions, cross-domain metrics and integrated scores |
 
 Captions are placed below figures in `manuscript_draft.md`. Formal manuscript figures contain scientific panels only.
 """,
@@ -1113,6 +1118,10 @@ def write_qc(manuscript_text: str) -> None:
     abstract = section_between(manuscript_text, "Abstract", "Introduction")
     intro = section_between(manuscript_text, "Introduction", "Results")
     discussion = section_between(manuscript_text, "Discussion", "Methods")
+    keyword_match = re.search(r"\*\*Keywords:\*\*\s*(.+)", abstract)
+    keyword_count = 0
+    if keyword_match:
+        keyword_count = len([k for k in re.split(r"[;,]", keyword_match.group(1)) if k.strip()])
     intro_paragraphs = [p for p in intro.split("\n\n") if p.strip()]
     discussion_subpoints = len(re.findall(r"^### ", discussion, re.M))
     figure_paths = sorted(FIGURE_DIR.glob("figure*.svg"))
@@ -1144,21 +1153,22 @@ def write_qc(manuscript_text: str) -> None:
         {
             "round": 4,
             "focus": "figure and visual style",
-            "checks": "all main figures use white backgrounds, compact six-panel layouts and mixed map/scatter/box/contour/surface panels",
+            "checks": "all main figures use white backgrounds, Cartopy map panels, readable fonts, stronger strokes and source-data-supported plot types",
             "status": "pass" if white_background and old_gray_absent and len(figure_paths) == 3 else "fail",
-            "notes": "Figures use a pure white page and restrained candy-colour data accents.",
+            "notes": "Figures use a pure white page, Natural Earth map rendering, larger labels and restrained candy-colour data accents.",
         },
         {
             "round": 5,
             "focus": "format and package",
-            "checks": "abstract, compressed introduction, three-point discussion, captions and package files are present",
+            "checks": "abstract, 5-7 keywords, compressed introduction, three-point discussion, captions and package files are present",
             "status": "pass"
             if 220 <= word_count(abstract) <= 280
+            and 5 <= keyword_count <= 7
             and 1100 <= word_count(intro) <= 1300
             and len(intro_paragraphs) <= 5
             and discussion_subpoints >= 3
             else "fail",
-            "notes": f"Abstract {word_count(abstract)} words; Introduction {word_count(intro)} words in {len(intro_paragraphs)} paragraphs; Discussion subpoints {discussion_subpoints}.",
+            "notes": f"Abstract {word_count(abstract)} words; Keywords {keyword_count}; Introduction {word_count(intro)} words in {len(intro_paragraphs)} paragraphs; Discussion subpoints {discussion_subpoints}.",
         },
     ]
     write_csv(QC_DIR / "qc_results.csv", ["round", "focus", "checks", "status", "notes"], rows)
@@ -1187,11 +1197,12 @@ This runnable example uses wheat salt-response data structures to show a formal 
 python scripts/build_demo.py
 ```
 
-The script uses `matplotlib` and `numpy` and regenerates:
+The script uses `matplotlib`, `numpy` and `cartopy` and regenerates:
 
 - four input CSV files for germination, physiology, expression and geographic distribution;
 - three white-background six-panel SVG figures;
 - `output/manuscript_draft.md` with figure captions below the figures;
+- a keyword line below the Abstract;
 - at least 30 Nature-style numbered references;
 - a five-pass QC report stored outside the formal manuscript.
 

@@ -62,6 +62,7 @@ State the selected route briefly when it affects user expectations. Load only th
 4. Design the manuscript around figures.
    - Use figures as the spine of Results when the dataset supports it.
    - Each main figure should support one result theme. For formal composite figures, default to 4 or 6 panels unless the journal format or evidence structure gives a clear reason to use a different count.
+   - Select plot types from the user's actual data, result question and statistical structure. Do not create maps, 3D surfaces, contours or other high-impact visuals unless the user's data contain the coordinates, continuous variables, replicate distributions or matrices needed to support them.
    - Keep tables for dense values, models, sample metadata, statistics, supplementary material and source data.
    - Build figures from the manuscript's evidence map, not from whatever plot exists already. Existing plots can supply data or cautionary examples, but they should not lock the final visual logic.
    - If AI image generation is used for visual exploration, treat generated images as style concepts only. Redraw data-bearing panels from traceable source data before manuscript delivery.
@@ -98,13 +99,15 @@ Minimum figure checks:
 - No duplicate panel letters; one letter corresponds to one data panel.
 - No internal plot titles when captions describe panels.
 - Axis labels sit close to plots without excessive margin.
-- Font sizes remain legible in the final composite figure, not only in source panels.
+- Font sizes remain legible in the final composite figure, not only in source panels; axis labels, tick labels, legends and colorbar labels must be large enough for manuscript insertion.
+- Lines, axes, markers and boxplot/violin outlines should have enough weight to look intentional in the final SVG/PDF, not only on a zoomed screen.
 - Legends do not cover data.
 - Colors are restrained, journal-appropriate and semantically consistent.
 - When a candy-color plus premium-gray style is requested, reserve candy colors for categorical emphasis and use gray for scaffold, axes, grids, text hierarchy and neutral context.
 - Use a pure white outer background for formal manuscript figures unless the target journal explicitly requires another background.
 - Keep gutters compact and panel sizes balanced; inspect rendered figures visually and adjust spacing until labels, legends and axes do not overlap.
 - When no special evidence constraint exists, compose formal main figures as 4- or 6-panel figures. Use maps, scatter/bubble plots, box/violin plots, heatmaps, contour fields or 3D response surfaces when the source data support them.
+- For geographic panels, prefer proper geospatial packages such as Cartopy, GeoPandas or validated boundary datasets with declared coordinate reference systems. Avoid hand-drawn map outlines for data-bearing maps.
 - Source data are traceable for every panel.
 
 ## Writing Rules

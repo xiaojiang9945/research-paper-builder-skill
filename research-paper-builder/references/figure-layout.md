@@ -13,6 +13,7 @@ For each figure, record:
 - key statistic or model;
 - caption claim;
 - manuscript subsection that cites it.
+- why each plot type is the best match for the available data.
 
 If two panels answer the same question, merge, remove or repurpose one of them.
 
@@ -41,6 +42,8 @@ Use these defaults unless the journal specifies otherwise:
 - consistent margins and gutters across a figure;
 - pure white outer figure background for submitted or submission-like figures;
 - compact gutters that keep panels visually close while preserving labels, legends and axis readability.
+- visibly readable type at manuscript insertion size, with axis labels, tick labels, legends and colorbar labels not treated as afterthoughts;
+- intentional stroke weight for axes, lines, boxplot outlines, violin outlines, error bars and marker edges.
 
 If a source plot has a long y-axis label, reduce label distance, abbreviate terms or widen that panel. Do not solve label collisions by shrinking all text.
 
@@ -77,6 +80,18 @@ When the dataset supports them, prefer richer figure panels over repeated simple
 - 3D surfaces only when they clarify a continuous response surface and remain readable at print size.
 
 Use these panels to answer distinct evidence questions. Do not add a complex plot only for decoration.
+
+## Map Panels
+
+Use data-bearing maps only when the user data include coordinates, regions, sampling sites, accession origins or spatial summaries.
+
+Preferred implementation:
+- use Cartopy, GeoPandas, Natural Earth, GADM, shapefiles, GeoJSON or another declared geospatial source;
+- state or preserve the coordinate reference system when a projection or boundary file is used;
+- use point size, colour or faceting only for variables present in the data;
+- keep boundaries light and neutral so the user's data remain visually primary.
+
+Avoid hand-drawn country or province outlines for manuscript maps. Use schematic maps only when the panel is explicitly conceptual, and label them as non-data schematics outside the formal manuscript if needed.
 
 ## Candy-Color Plus Premium-Gray Mode
 

@@ -45,7 +45,8 @@ full-text reading matrix after documented search and screening.
 
 Run examples/synthetic-wheat-study/scripts/build_demo.py, then build a formal manuscript-style package with
 three white-background six-panel main figures, figure captions below each figure, figure-led Results,
-candy-colour highlights on premium-gray axes and grid lines, approximately 250-word Abstract,
+candy-colour highlights on premium-gray axes and grid lines, Cartopy/Natural Earth map rendering when available, larger publication-readable fonts and strokes,
+approximately 250-word Abstract with 5-7 keywords directly below it,
 approximately 1,200-word Introduction/background in fewer developed paragraphs, at least 30 Nature-style numbered references,
 citation-reference audit, Data Availability statement, reviewer-risk audit, five-pass QC report, and package manifest.
 ```
@@ -70,6 +71,7 @@ Start with:
 - [Example reviewer-risk audit](examples/synthetic-wheat-study/output/reviewer_risk_audit.md)
 
 Real manuscript work should use verified literature and should not claim a 200-paper full-text review unless a reading matrix exists.
+For real user data, choose figures from the data and result question. Do not add maps, 3D surfaces or contours unless the data contain the spatial coordinates, continuous variables or matrices needed to support those panels.
 
 ## Install Or Test Locally
 

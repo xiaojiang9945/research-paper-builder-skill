@@ -41,6 +41,8 @@ Do not claim final-package QC passed for a partial route.
 - Source panels are preserved separately.
 - Each panel has one letter only.
 - Fonts are readable in the composite.
+- Axis labels, tick labels, legends and colorbar labels are large enough after manuscript insertion.
+- Data lines, marker edges, boxplot outlines, violin outlines and axes are visibly weighted rather than hairline-thin.
 - No internal titles remain unless required.
 - Captions define panel statistics, sample size and abbreviations.
 - Every figure panel has traceable source data or a documented non-data role.
@@ -49,6 +51,8 @@ Do not claim final-package QC passed for a partial route.
 - Formal composite figures default to 4 or 6 panels when there is no evidence-specific reason to depart.
 - Panel gutters are compact and visually inspected; labels, legends, colorbars and 3D axes do not overlap or clip.
 - Rich plot types, such as maps, scatter/bubble plots, box/violin plots, heatmaps, contour plots and 3D surfaces, are used only when source data support the panel.
+- Geographic panels use a proper geospatial package or validated boundary dataset rather than hand-drawn outlines.
+- Every selected plot type has a data/result reason documented in the figure plan or evidence map.
 
 ## Data And Table Checks
 
@@ -95,6 +99,7 @@ Pass 3: scientific language and claim scope.
 Pass 4: figure and visual quality.
 - Inspect each source panel and composite.
 - Check panel letters, clipping, axis labels, legends, color mapping, caption-panel agreement and source-data traceability.
+- Check that fonts and strokes still look publication-ready after rendering the composite at final size.
 - If candy-color plus premium-gray styling is requested, confirm candy colors are limited to meaningful highlights and gray carries the scaffold.
 - Confirm the whole rendered figure, not only the plotting area, has a white background.
 - Confirm default 4- or 6-panel composition for standard main figures, or document why a different panel count is better.
@@ -103,6 +108,7 @@ Pass 4: figure and visual quality.
 
 Pass 5: format, privacy and package hygiene.
 - Check section order, heading hierarchy, file names, package folders, figure/table callouts and supplementary labels.
+- If keywords are required or requested, confirm 5-7 keywords appear directly below the Abstract.
 - Scan for private names, local paths, credentials, unpublished side-project terms and obsolete file names.
 - Confirm Data Availability, author placeholders and remaining journal-specific actions are clearly marked.
 

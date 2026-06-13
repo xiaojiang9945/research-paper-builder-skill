@@ -48,6 +48,8 @@ Write the Abstract last for full manuscripts. If a result value is not final, ma
 
 For full research articles, target about 250 words unless the journal gives a different limit. A 100-word summary is not an adequate manuscript abstract unless explicitly requested.
 
+When the target format uses keywords, place a keyword line directly below the Abstract. Use 5-7 keywords, ordered from broad topic to specific system, trait, method or evidence layer. Do not repeat the title verbatim as the keyword list.
+
 ## Introduction
 
 Move from field relevance to the precise gap the paper can address:

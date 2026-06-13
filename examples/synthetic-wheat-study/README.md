@@ -8,11 +8,12 @@ This runnable example uses wheat salt-response data structures to show a formal 
 python scripts/build_demo.py
 ```
 
-The script uses `matplotlib` and `numpy` and regenerates:
+The script uses `matplotlib`, `numpy` and `cartopy` and regenerates:
 
 - four input CSV files for germination, physiology, expression and geographic distribution;
 - three white-background six-panel SVG figures;
 - `output/manuscript_draft.md` with figure captions below the figures;
+- a keyword line below the Abstract;
 - at least 30 Nature-style numbered references;
 - a five-pass QC report stored outside the formal manuscript.
 

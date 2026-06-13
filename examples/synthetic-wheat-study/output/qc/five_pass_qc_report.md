@@ -20,12 +20,12 @@
 
 ## Round 4. Figure And Visual Style
 
-- Checks: all main figures use white backgrounds, compact six-panel layouts and mixed map/scatter/box/contour/surface panels
+- Checks: all main figures use white backgrounds, Cartopy map panels, readable fonts, stronger strokes and source-data-supported plot types
 - Status: pass
-- Notes: Figures use a pure white page and restrained candy-colour data accents.
+- Notes: Figures use a pure white page, Natural Earth map rendering, larger labels and restrained candy-colour data accents.
 
 ## Round 5. Format And Package
 
-- Checks: abstract, compressed introduction, three-point discussion, captions and package files are present
+- Checks: abstract, 5-7 keywords, compressed introduction, three-point discussion, captions and package files are present
 - Status: pass
-- Notes: Abstract 226 words; Introduction 1101 words in 4 paragraphs; Discussion subpoints 3.
+- Notes: Abstract 238 words; Keywords 7; Introduction 1101 words in 4 paragraphs; Discussion subpoints 3.

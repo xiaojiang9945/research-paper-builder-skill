@@ -16,6 +16,7 @@ Do not claim final-package QC passed for a partial route.
 ## Manuscript Checks
 
 - Section order matches the user request or target journal.
+- If work occurred inside a repository, applicable `AGENTS.md` and README validation instructions were followed.
 - Title, abstract and result headings are concise and informative.
 - Results describe findings before conclusions.
 - Discussion does not repeat every result value.
@@ -24,6 +25,8 @@ Do not claim final-package QC passed for a partial route.
 - All placeholder author, affiliation, funding and accession text is clearly marked or replaced.
 - The one-sentence argument contract matches the title, Abstract, Results and Discussion.
 - The terminology ledger, if created, has no unresolved forbidden variants in final files.
+- The manuscript passport or equivalent state note is updated for full-package work, but no passport/process/QC language appears inside the formal manuscript.
+- Material gaps that affect factual claims, methods, metadata, accessions, permissions or authorship are recorded as author actions outside the manuscript.
 
 ## Citation Checks
 
@@ -33,6 +36,8 @@ Do not claim final-package QC passed for a partial route.
 - Citation ranges are expanded during checking.
 - Reference style is consistent.
 - Claims that depend on prior work have support-grade-appropriate citations.
+- Numerical, factual, comparative, trend and causal claims have source support or are softened/removed.
+- Cited sources are checked for claim support when locators or full text are available; citation existence alone is not treated as support.
 - Style-matching reference papers are not cited unless they also support a scientific claim.
 
 ## Figure Checks
@@ -90,11 +95,14 @@ Pass 2: citation and reference consistency.
 - Verify every in-text citation maps to a reference entry.
 - Verify every reference entry is cited.
 - Check citation role and support grade for background, method, interpretation and limitation claims.
+- Run a claim-support audit for numerical, factual, comparative, trend and causal claims. Final packages should have zero unsupported claims and zero fabricated references.
+- Mark access-limited claims for author verification unless the wording is broad enough for the available source evidence.
 
 Pass 3: scientific language and claim scope.
 - Remove internal process language, local paths, TODOs and author-side rationale.
 - Check terminology ledger compliance.
 - Check grammar, paragraph jobs, tense, hedging and forbidden phrases.
+- Check style-quality patterns: throat-clearing openers, repetitive transitions, template-like paragraph lengths, synonym cycling, punctuation tics and unsupported superlatives.
 
 Pass 4: figure and visual quality.
 - Inspect each source panel and composite.
@@ -111,6 +119,8 @@ Pass 5: format, privacy and package hygiene.
 - If keywords are required or requested, confirm 5-7 keywords appear directly below the Abstract.
 - Scan for private names, local paths, credentials, unpublished side-project terms and obsolete file names.
 - Confirm Data Availability, author placeholders and remaining journal-specific actions are clearly marked.
+- Confirm package artifacts are separated by purpose: manuscript files, source data, figures, scripts, QC reports, passports, reviewer-risk audits and author-action lists.
+- Check quality trajectory after revisions: fixes should not introduce new citation drift, figure-text mismatch, argument overreach, method under-specification or style regression.
 
 ## Pre-Submission Risk Checks
 

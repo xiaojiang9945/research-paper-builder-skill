@@ -15,6 +15,24 @@ Before major writing, extract these features from target instructions or referen
 
 Do not copy reference-paper wording. Match structural conventions and scientific pacing.
 
+## Manuscript Passport
+
+For a full manuscript package, maintain a compact state file in the output folder. It is a working artifact, not part of the formal manuscript.
+
+Recommended fields:
+- route mode, article type, target journal and target style;
+- one-sentence argument contract;
+- source-material inventory with file names, dates and access status;
+- literature status: search log path, reading matrix path, number fully read, number screened and unresolved gaps;
+- data inventory: raw data, processed data, analysis scripts, source data and excluded files;
+- figure registry: figure number, panel list, result question, source data, statistic/model and caption claim;
+- claim registry status: numerical, factual, comparative, trend and causal claims checked, unchecked and blocked;
+- citation status: reference style, bibliography source, locator availability and unresolved metadata;
+- author actions: missing accessions, funding, author details, permissions, repository deposits and journal-specific items;
+- validation log: scripts run, QC pass count, visual inspection status and package path.
+
+Use the passport as the resume boundary for long work. Update it after literature intake, figure redesign, major rewriting, citation checks and final packaging. Keep process labels, QC scores and author actions out of manuscript text, captions and figures.
+
 ## Default Research Article Structure
 
 Title:
@@ -29,7 +47,7 @@ Abstract:
 - Avoid unsupported mechanism language and generic importance statements.
 
 Keywords:
-- Use 4 to 8 terms.
+- Use 5 to 7 terms unless the journal specifies another limit.
 - Include organism or system, method, process, and application domain.
 
 Introduction:

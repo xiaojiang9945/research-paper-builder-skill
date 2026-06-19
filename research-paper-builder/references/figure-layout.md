@@ -19,6 +19,19 @@ If two panels answer the same question, merge, remove or repurpose one of them.
 
 Formal main figures should contain scientific content only. Do not place author-facing statements, claim-boundary boxes, QC gates, package manifests, process notes, generation notes, prompt notes or explanatory demo text inside figures intended to represent a submitted manuscript. Put those checks in separate QC files, evidence maps or reviewer-risk audits.
 
+## Data-Figure Contract
+
+Every data-bearing panel needs a contract before it is drawn:
+- panel question: the exact result question the panel answers;
+- source data: file, worksheet, columns and filtering rule;
+- statistical unit: plant, line, accession, plot, replicate, gene, site or time point;
+- analysis: test, model, normalization, projection, smoothing or transformation;
+- visual reason: why this plot type is the clearest match for the result;
+- manuscript link: Results subsection, panel callout and caption claim;
+- reproducibility path: script, notebook or command that rebuilds the panel.
+
+If the source data do not support the proposed map, 3D surface, contour, bubble plot, distribution plot or heatmap, produce a figure plan or request the missing data. Do not invent a rich visual only to make the manuscript look advanced.
+
 ## Figure Planning
 
 Each main figure should answer one result question. A strong composite figure usually combines:

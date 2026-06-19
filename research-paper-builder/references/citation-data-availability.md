@@ -33,6 +33,32 @@ Before delivery:
 - no reference-paper examples are cited merely because they were used for style matching;
 - citation style matches the target journal.
 
+## Claim-Support Audit
+
+For full packages and high-stakes revisions, check whether a citation actually supports the claim it is attached to.
+
+Create a claim registry with:
+
+```text
+claim_id,claim_text,section,claim_type,cited_source,source_locator,support_grade,verdict,action
+```
+
+Claim types:
+- `quantitative`: counts, percentages, effect sizes, p-values, fold changes, sample sizes.
+- `factual`: species, gene, method, dataset, publication or historical assertions.
+- `comparative`: largest, first, higher, lower, enriched, depleted, broader, narrower.
+- `trend`: increasing, declining, stable, stage-specific or time-dependent.
+- `causal`: causes, regulates, drives, confers, determines or mediates.
+
+Verdicts:
+- `verified`: the source supports the claim with matching scope.
+- `minor-adjust`: the source supports the claim after wording, rounding or scope tightening.
+- `unsupported`: the source does not support the claim.
+- `access-limited`: the source exists but the needed passage could not be checked.
+- `metadata-missing`: bibliographic, DOI, accession or repository information is incomplete.
+
+Final manuscripts should have no `unsupported` claim and no fabricated reference. `access-limited` claims may remain only if the wording is broad enough for the available evidence or the unresolved action is stated outside the manuscript.
+
 ## Nature-Style Reference Pattern
 
 When the target is Nature or a Nature-family journal and no journal-specific override is provided, use numbered citations and a compact reference list.

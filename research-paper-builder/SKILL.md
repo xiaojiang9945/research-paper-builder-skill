@@ -9,12 +9,13 @@ description: Use when Codex needs to plan, write, rewrite, polish, audit, format
 
 Before writing or revising, classify the request in one short internal pass:
 - `scope`: full manuscript, single section, language polish, figure/caption, citation/data availability, reviewer response, or final package.
+- `route_mode`: plan-first, full-package, section-only, revision, figure-package, citation-check, format-only, reviewer-risk, or rebuttal-planning.
 - `article_type`: research article, methods/resource paper, review, hypothesis/commentary, or computational/algorithmic paper.
 - `venue_pressure`: generic journal, society journal, or high-impact broad-audience journal.
 - `source_language`: English, Chinese, mixed notes, or bilingual draft.
 - `evidence_state`: raw data available, figures available, draft only, literature-only, or missing critical support.
 
-State the selected route briefly when it affects user expectations. Load only the references needed for that route:
+If the request is broad, the evidence is incomplete, or the literature base is not yet documented, choose a plan-first or literature-intake route before polished drafting. State the selected route briefly when it affects user expectations. Load only the references needed for that route:
 - `references/manuscript-framework.md` for structure, section order, display-item planning and section length.
 - `references/literature-intake.md` before full manuscript writing, especially when the target is SCI, Nature/Cell/Science-family, Nature Plants, Molecular Plant, The Plant Cell, PNAS or another ambitious venue.
 - `references/section-writing-playbook.md` for title, abstract, introduction, Results, Discussion, Methods or conclusion drafting.
@@ -30,16 +31,19 @@ State the selected route briefly when it affects user expectations. Load only th
 ## Core Workflow
 
 1. Define the target paper before writing.
+   - If working inside a repository, first read the nearest `AGENTS.md`, README and validation instructions that apply to the current directory. Treat those as the project contract for editing, testing and privacy.
    - Identify article type, target journal, required section order, word limits, display-item limits, reference style and submission materials.
    - If the user provides journal instructions or reference papers, inspect them first and extract structure, density, figure style, caption style and argument rhythm.
    - Write a one-sentence argument contract before drafting: in what system, what advance is shown, by what approach, with which evidence, and within what boundary.
    - Match the title and framing to the actual evidential object. Do not claim that one data layer explains an entire process when it supports a narrower molecular, spatial or validation layer.
    - When project history forces one data type or angle to be the manuscript focus, do not disclose internal constraints; frame the paper around that layer's intrinsic contribution and defensible scope.
    - Preserve raw files; write generated manuscripts, figures, tables and packages under a dedicated output folder.
+   - For full packages, create or update a compact manuscript passport in the output folder: route, target journal, source-material inventory, literature status, data inventory, figure registry, claim registry status, citation status, unresolved author actions and validation log. Keep this passport out of formal manuscript text and figure panels.
 
 2. Build the evidence map.
    - Inventory all available data, analyses, figures, notes, references and prior drafts.
    - Separate measured results, derived statistics, interpretation, limitations and future work.
+   - Prefer user-provided materials, source data and verified literature over model memory for factual content. If a needed method, result, citation or metadata item is absent, record an author action or material gap in planning/QC files instead of filling it with a plausible guess.
    - Build or update a terminology ledger for canonical gene names, sample labels, trait abbreviations, datasets, methods, statistical terms and forbidden variants before drafting substantial prose.
    - Identify the central research question and 3 to 6 result themes that can be supported by data.
    - Reconstruct the study design and core objective before ranking samples, genes, pathways, mechanisms or visual themes.
@@ -55,6 +59,7 @@ State the selected route briefly when it affects user expectations. Load only th
    - For high-ambition full manuscripts, complete a documented literature intake before drafting: normally at least 200 directly relevant papers fully read and entered into a reading matrix, after broader database and citation-trail screening when needed.
    - Do not claim that a manuscript is field-ready if the literature intake is incomplete. In that case, deliver a literature plan, search strategy, reading matrix, outline and writing blockers rather than a polished final manuscript.
    - Prioritize full text, figures, methods, supplementary tables, dataset accessions and cited methods over abstract-only reading.
+   - Maintain a search log with database/source, query, date, screening rule, full-text access status and exclusion reason. For important claims, keep enough locator detail to re-check the source later.
    - Extract common analysis types, figure architectures, result-section rhythm, claim boundaries and validation expectations from the literature. Reuse only analyses that match the current design and data.
    - Study at least 20 high-impact figure examples when asked to target Nature Plants, Molecular Plant, Cell/Nature/Science-family, The Plant Cell or equivalent venues; record what each example teaches about panel logic, density, hierarchy and caption style, not wording or design imitation.
    - Convert literature learning into a story map before writing: central question, design logic, figure sequence, main claim, alternative explanations, validation boundary and novelty statement.
@@ -63,6 +68,7 @@ State the selected route briefly when it affects user expectations. Load only th
    - Use figures as the spine of Results when the dataset supports it.
    - Each main figure should support one result theme. For formal composite figures, default to 4 or 6 panels unless the journal format or evidence structure gives a clear reason to use a different count.
    - Select plot types from the user's actual data, result question and statistical structure. Do not create maps, 3D surfaces, contours or other high-impact visuals unless the user's data contain the coordinates, continuous variables, replicate distributions or matrices needed to support them.
+   - For each panel, record the data reason: what question the panel answers, what file or worksheet supplies the values, which statistic or model is used, and where the Results text cites it.
    - Keep tables for dense values, models, sample metadata, statistics, supplementary material and source data.
    - Build figures from the manuscript's evidence map, not from whatever plot exists already. Existing plots can supply data or cautionary examples, but they should not lock the final visual logic.
    - If AI image generation is used for visual exploration, treat generated images as style concepts only. Redraw data-bearing panels from traceable source data before manuscript delivery.
@@ -77,6 +83,7 @@ State the selected route briefly when it affects user expectations. Load only th
    - For English manuscripts, remove non-English characters from main text, figure labels, tables and DOCX XML unless the journal explicitly allows them.
    - State the positive scientific finding directly. Avoid rhetorical reversals such as "not X but Y", "rather than", "cannot prove", process defenses, and sentences that explain why an analysis route was chosen.
    - Keep method adjudication, sensitivity screens and discarded analysis routes in internal QA or supplementary methods only when they are scientifically necessary; do not make them the manuscript's narrative engine.
+   - If evidence is not sufficient for a clean manuscript statement, keep the uncertainty in an external author-action list or write a bounded sentence that states only what the evidence supports. Do not leave TODOs, claim-boundary labels or process explanations in the formal draft.
 
 6. Polish and package.
    - Use `references/manuscript-framework.md` when designing structure or section length.
@@ -87,6 +94,8 @@ State the selected route briefly when it affects user expectations. Load only th
    - Use `references/submission-qc.md` before final delivery.
    - Run a pre-submission risk audit for ambitious manuscripts: likely editor concern, likely methods/statistics concern, likely field-specialist concern and what evidence or wording reduces each risk.
    - Run at least five focused QC passes for full manuscript packages: evidence/data, citation/reference, scientific language and claims, figure/visual design, and format/package/privacy.
+   - For revisions, maintain a concise revision ledger that maps each user request, reviewer concern or detected defect to the changed section, evidence source and verification result.
+   - After large revisions, check quality trajectory: confirm that fixes did not weaken the title, Abstract, argument boundary, figure-text agreement, methods reproducibility or citation support.
    - Before packaging, reconcile manuscript claims with source data, claim banks, figure registry, captions and source workbooks. Update stale intermediate files instead of reusing prior-draft numbers.
    - If figures or modules are removed or renumbered, update every reference in text, captions, source data, figure registry, DOCX/build scripts, package manifests and QC scripts.
    - Exclude obsolete module outputs, old filenames and out-of-scope source sheets from clean submission packages.
@@ -118,8 +127,11 @@ Minimum writing checks:
 - Avoid self-descriptive prose such as "this draft", "as requested", "kept out", "not shown", "we followed the user's instructions" or "the figure shows a story".
 - Remove internal process details, local paths, TODO placeholders, old version names, author-side rationale and project-management language from manuscript text, captions, tables and package files.
 - Avoid repeated filler words such as `layer`, `landscape`, `robust`, `comprehensive`, `rather than`, `not only`, `not merely`, `cannot prove` and excessive hyphenated phrasing unless scientifically necessary.
+- Use any supplied author style samples only to calibrate rhythm and terminology. Journal conventions, evidence accuracy and disciplinary precision override personal style.
+- Check for throat-clearing openers, uniform paragraph lengths, synonym cycling, repeated em dashes or semicolons, and template-like transitions. Fix these as prose-quality issues, not as detector-evasion work.
 - Verify every in-text citation maps to a reference-list entry and every listed reference is cited.
 - Verify every numerical claim against a traceable source file rather than a previous draft.
+- Verify that cited sources support the claims they are attached to; reference existence alone is not enough.
 
 ## Revision and QC Rules
 
@@ -127,6 +139,7 @@ When revising an existing paper:
 - Read the whole manuscript after structural edits and check title, Abstract, Results, Discussion, Methods, captions and source data for the same story boundary.
 - Search for forbidden or removed-topic terms, internal notes, stale figure numbers and stale result numbers before final delivery.
 - Confirm each main figure has a matching caption, source-data entry and registry record.
+- Confirm the claim registry or claim-check notes cover numerical, factual, comparative, trend and causal claims.
 - For English manuscripts, check DOCX headings, inline figure count, zip integrity and unexpected CJK characters.
 - Perform at least five focused revision passes when the user asks for a polished manuscript or full package: evidence/data consistency; citation/reference consistency; scientific language and claim scope; figure-text-caption-source consistency; formatting, privacy and package cleanup.
 - If layout rendering or visual inspection cannot be performed because required tools are missing, state that limitation in the delivery notes.

@@ -12,6 +12,9 @@ This repository is currently a **private test repository**. Keep it private unti
 - Design a figure-led Results structure for journal-style papers.
 - Polish title, abstract, introduction, Results, Discussion, Methods, captions, and Data Availability.
 - Check terminology consistency, citation/reference consistency, source-data traceability, and submission package hygiene.
+- Maintain a manuscript passport for full-package work so long projects keep their target journal, literature status, evidence map, figure registry, claim checks, author actions, and validation log synchronized.
+- Verify whether citations actually support manuscript claims, not only whether the references exist.
+- Keep process notes, QC gates, passports, and author actions outside formal manuscript text and figures.
 - Run a pre-submission reviewer-risk audit before sharing a draft.
 
 ## Repository Layout
@@ -25,11 +28,20 @@ research-paper-builder-skill/
 |   +-- scripts/
 +-- examples/
 |   +-- synthetic-wheat-study/        # runnable synthetic wheat demo input and output
++-- AGENTS.md                         # repo-level editing and validation instructions
 +-- LICENSE
 +-- USE_POLICY.md
 +-- SECURITY.md
 +-- README.md
 ```
+
+## Operating Principles
+
+- Start with route selection: plan-first, full package, section-only, revision, figure package, citation check, format-only, reviewer-risk audit, or rebuttal planning.
+- For ambitious full manuscripts, require documented literature intake before polished drafting. If the 200-paper full-text standard is not met, output a literature plan, reading matrix, outline, and blockers instead of pretending the manuscript is field-ready.
+- Treat user files, source data, and verified literature as the factual source of truth. Missing methods, data, citation locators, accessions, funding, author details, or permissions become author actions.
+- Choose figures from the actual data and result question. Rich visuals are welcome only when the data support them.
+- Before committing repository changes, follow [AGENTS.md](AGENTS.md) for validation and privacy checks.
 
 ## Quick Demo
 

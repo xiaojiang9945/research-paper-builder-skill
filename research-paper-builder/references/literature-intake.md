@@ -45,6 +45,15 @@ Use multiple query families:
 
 For each family, record database/source, query, date, hit count, screening rule and retained papers.
 
+The search log should also record:
+- searcher or tool used;
+- filters applied, including language, date range, article type and species/system;
+- full-text access route or access limitation;
+- backward/forward citation expansion source;
+- duplicate-removal rule;
+- exclusion reason for papers screened out after title/abstract or full-text review;
+- freshness check date before final manuscript drafting.
+
 ## What To Extract From Full Text
 
 For each core paper, extract:
@@ -56,6 +65,9 @@ For each core paper, extract:
 - terminology and abbreviations;
 - limitations and alternative explanations;
 - datasets, accessions, software and supplementary material that matter.
+- source locators for claim checking: page, figure, table, supplementary item, dataset accession or section heading when available.
+
+For high-impact papers, do not stop at extracting topic summaries. Record what each paper teaches about evidential standards: what controls were expected, what validation depth made the claim credible, what claims the authors avoided, and how figures carried the argument.
 
 ## Writing Gate
 
@@ -65,5 +77,7 @@ Before drafting a full manuscript, confirm:
 - every Introduction paragraph has citation support;
 - every reference-list item is cited, and every in-text citation maps to the reference list;
 - no reference is invented from memory.
+- core claims have locator-ready citation notes, not only paper titles or DOI strings;
+- papers unavailable in full text are marked as limited-access and not used to support detailed factual claims that cannot be verified.
 
 If the gate is not satisfied, produce a literature plan and writing outline rather than a final manuscript.

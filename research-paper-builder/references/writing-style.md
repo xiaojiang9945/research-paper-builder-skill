@@ -13,6 +13,22 @@ Polish structure before sentences:
 
 If the paragraph lacks evidence or has the wrong job for its section, flag the structural issue instead of only improving wording.
 
+## Style Calibration
+
+When the user supplies prior writing samples, use them to calibrate rhythm, terminology density, preferred concision and sentence shape. Do not imitate private examples verbatim. Do not let style samples override journal instructions, scientific accuracy, citation support or discipline-specific terminology.
+
+Good calibration changes:
+- paragraph rhythm and transition density;
+- level of technical compression;
+- preferred active/passive balance;
+- terminology choices already accepted by the author or field.
+
+Unsafe calibration:
+- copying distinctive phrases;
+- preserving unclear habits only because they appear in the sample;
+- changing evidence strength to match a more assertive style;
+- using a "humanizer" framing. The goal is clearer scientific prose.
+
 ## Scientific Claim Discipline
 
 Use the evidence level to choose verbs:
@@ -54,6 +70,11 @@ Search for and reduce:
 - contrast padding: repeated "rather than";
 - overlong hyphenated noun phrases;
 - vague conclusions: "provides insights", "lays a foundation" without specifying the insight.
+- throat-clearing openers such as "it is important to note", "it is worth mentioning" and "in recent years" when they add no information;
+- repeated punctuation habits, especially em dashes, semicolons and colon-led list paragraphs;
+- uniform paragraph length that makes the paper feel template-driven;
+- synonym cycling that swaps terms for variety and weakens technical consistency;
+- repeated binary contrasts such as "not X but Y" unless the contrast is scientifically necessary.
 
 For English SCI manuscripts:
 - remove Chinese characters from the main text, figures, tables and DOCX XML;

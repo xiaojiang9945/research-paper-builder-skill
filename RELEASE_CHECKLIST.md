@@ -4,7 +4,9 @@ Use this checklist before making the repository public or sharing a release arch
 
 ## Repository Review
 
-- [ ] Repository visibility is still private during testing.
+- [ ] Repository stayed private during testing and review.
+- [ ] First public release version is `1.0.0`, matching the root `VERSION` file.
+- [ ] Public tag, if created, is `v1.0.0`; internal optimization commits and demo-improvement milestones are not used as release versions.
 - [ ] README contains no local absolute paths or personal machine details.
 - [ ] Demo data are clearly marked synthetic.
 - [ ] Demo references use the target journal style and all metadata are verified before any public release.
@@ -31,5 +33,5 @@ Use this checklist before making the repository public or sharing a release arch
 ## Final Approval
 
 - [ ] User has reviewed the private repository.
-- [ ] User explicitly approves public sharing.
-- [ ] Release notes state the license and non-commercial use boundary.
+- [ ] User explicitly approves public sharing of `1.0.0`.
+- [ ] Release notes state version `1.0.0`, the license and the non-commercial use boundary.

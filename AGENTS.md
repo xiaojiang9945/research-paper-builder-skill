@@ -19,6 +19,7 @@ These instructions apply to this repository. Follow them when editing the skill,
 - Keep formal manuscript outputs clean. Process notes, claim checks, passports, QC gates, reviewer-risk audits, and author actions belong in separate QC or planning files, not inside manuscript text or figure panels.
 - Keep demo data synthetic and clearly labelled as synthetic outside the formal manuscript example.
 - Add new files only when they directly improve the reusable skill or repository workflow.
+- Treat the first public release as `1.0.0`. Do not use internal optimization commits, testing iterations, or demo-improvement milestones as release versions.
 
 ## Validation
 
@@ -46,5 +47,6 @@ rg -n "(Users[\\\\/][A-Za-z0-9._-]+|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9]{
 - The skill validates.
 - Demo package validation still passes when demo-affecting files change.
 - Documentation and examples agree with the actual workflow.
+- The root `VERSION` file matches any intended release tag.
 - New guidance is actionable, scoped, and not duplicated across files.
 - The git diff is reviewable and free of private information.

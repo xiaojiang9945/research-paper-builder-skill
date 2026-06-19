@@ -2,7 +2,7 @@
 
 `research-paper-builder` is a Codex skill for turning research materials into a manuscript-ready package: evidence map, figure-led Results, journal-style sections, citation/data checks, reviewer-risk audit, and submission QC.
 
-This repository is currently a **private test repository**. Keep it private until the skill, examples, and license are reviewed.
+The intended first public release is **1.0.0**. Internal optimization commits are not release versions; create public tags or release archives only from an owner-approved release commit.
 
 ## What It Helps With
 
@@ -32,8 +32,19 @@ research-paper-builder-skill/
 +-- LICENSE
 +-- USE_POLICY.md
 +-- SECURITY.md
++-- VERSION
 +-- README.md
 ```
+
+## Versioning
+
+The first approved public release should be tagged `v1.0.0`, matching the root `VERSION` file. Do not use internal optimization commit hashes, internal testing iterations, or demo-improvement milestones as release versions.
+
+After `1.0.0`, use semantic versioning:
+
+- patch versions for documentation fixes, validation-script fixes, or small wording corrections;
+- minor versions for new reusable workflows, references, demos, or validation checks;
+- major versions for breaking changes to expected package structure, QC gates, or skill behavior.
 
 ## Operating Principles
 

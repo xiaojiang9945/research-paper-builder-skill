@@ -4,6 +4,12 @@
 
 The intended first public release is **1.0.0**. Internal optimization commits are not release versions; create public tags or release archives only from an owner-approved release commit.
 
+<p align="center">
+  <img src="assets/graphical_abstract.png" alt="Research Paper Builder graphical abstract" width="980">
+</p>
+
+The graphical abstract summarizes the full-package workflow: project inputs, literature gate, evidence map, figure-led Results, manuscript package, and submission QC.
+
 ## What It Helps With
 
 - Plan a research manuscript from raw notes, figures, tables, references, and prior drafts.

@@ -18,6 +18,7 @@ For each figure, record:
 If two panels answer the same question, merge, remove or repurpose one of them.
 
 Formal main figures should contain scientific content only. Do not place author-facing statements, claim-boundary boxes, QC gates, package manifests, process notes, generation notes, prompt notes or explanatory demo text inside figures intended to represent a submitted manuscript. Put those checks in separate QC files, evidence maps or reviewer-risk audits.
+Synthesis models, mechanism cartoons and experimental roadmaps can be main figures only when they are clearly derived from preceding evidence and labeled as models, hypotheses or assay logic. Their captions and Results text must not imply direct validation unless the panel contains measured data.
 
 ## Data-Figure Contract
 
@@ -156,6 +157,8 @@ Captions should:
 - identify sample size, statistic, error bars and test where relevant;
 - explain abbreviations not already obvious;
 - avoid interpreting beyond the panel evidence.
+- distinguish measured data panels from conceptual, synthesis or proposed-experiment panels.
+- avoid method/QC titles such as `quality control`, `filtering logic`, `workflow`, `claim boundary` when a scientific title can state the result and scope.
 
 ## Visual QA
 
@@ -167,6 +170,9 @@ Before final delivery:
 - check labels and numbers are not cropped;
 - build a contact sheet for all main figures when there are many display items;
 - keep source panels separate from final main figures.
+- check that every figure caption has the format expected by the target journal, normally `Figure N. Title. A, ... B, ...`.
+- ensure DOCX or PDF exports include all figures, matching captions, and accessible image descriptions when the format supports them.
+- scan figure filenames, embedded labels and captions for old version tags, internal placeholders, local paths and project-management terms before packaging.
 
 For high-impact submissions, also check whether:
 - the first figure establishes the study system and primary evidence clearly;

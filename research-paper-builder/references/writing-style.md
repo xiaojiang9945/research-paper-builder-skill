@@ -39,6 +39,12 @@ Use the evidence level to choose verbs:
 - Future work: can be tested by, warrants functional analysis, requires validation.
 
 Avoid claiming demonstration of regulation, causality, pathway flux or field utility unless the experiment directly tested it.
+For evolutionary, catalog or comparative manuscripts, match claim strength to the evidence:
+- Raw database hits or domain co-occurrences: `discovery records`, `catalog entries`, `candidate set`, not curated genes or copy numbers.
+- Current-catalog absence: `not detected in the current catalog/sampled groups`, not absolute absence.
+- Representative guide trees: `consistent with`, `places in representative context`, not formal dating, origin resolution or species-tree reconciliation.
+- Gene structure, synteny or repeat-neighbor evidence: `constrains`, `is consistent with`, `nominates candidate mechanisms`, not breakpoint proof or causative mechanism.
+- Conserved architecture without perturbation: `persistent architecture` or `retention hypothesis`, not selection, functional advantage or demonstrated retention.
 
 ## Results Style
 
@@ -49,6 +55,8 @@ Write Results in this order:
 4. End with a restrained conclusion.
 
 Do not begin each subsection with broad background. Save interpretation and literature comparison for Discussion unless a short bridge is needed.
+Use finding-first figure references: write `PF11721 was broadly distributed (Figure 1A,B)`, not `Figure 1 shows that PF11721 was broadly distributed`. Keep the figure citation as support for the sentence, not the grammatical subject.
+If a section uses a synthesis model, experimental roadmap or conceptual panel, say so explicitly. Do not write the model panel as if it were direct evidence.
 
 ## Discussion Style
 
@@ -65,6 +73,8 @@ Technical next steps such as primer design, file conversion, database cleaning o
 
 Search for and reduce:
 - self-reference: "this draft", "as requested", "we used the reference paper as";
+- literature-process language: "we read 200 papers", "a 320-paper corpus", "based on the papers we learned";
+- package/process language in formal text: "build script", "QC pass", "traceability review", "stale-term scan", "current version", "output package";
 - generic paper-writing words: "story", "narrative", "layer", "landscape" when not necessary;
 - unsupported superlatives: "novel", "first", "comprehensive", "robust";
 - contrast padding: repeated "rather than";
@@ -80,6 +90,15 @@ For English SCI manuscripts:
 - remove Chinese characters from the main text, figures, tables and DOCX XML;
 - convert material names to accepted English or pinyin forms consistently;
 - define abbreviations once and use them consistently.
+- choose either American or British spelling and apply it consistently across manuscript, captions and tables.
+
+## Title And Abstract Claim Scope
+
+Before delivery, compare the title and Abstract to the strongest direct evidence:
+- Avoid title-level verbs such as `drives`, `explains`, `defines diversification`, `establishes origin` or `confers function` unless direct data support those claims.
+- Prefer bounded verbs such as `defines`, `marks`, `links`, `is consistent with`, `supports a model`, `prioritizes` or `nominates` for computational or integrative evidence.
+- Format large numbers with thousands separators and spell out small numbers in prose when journal style allows.
+- In the Abstract, state raw discovery counts and curated/validated counts separately.
 
 ## Sentence-Level Checks
 

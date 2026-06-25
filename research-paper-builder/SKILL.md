@@ -47,6 +47,14 @@ If the request is broad, the evidence is incomplete, or the literature base is n
    - Build or update a terminology ledger for canonical gene names, sample labels, trait abbreviations, datasets, methods, statistical terms and forbidden variants before drafting substantial prose.
    - Identify the central research question and 3 to 6 result themes that can be supported by data.
    - Reconstruct the study design and core objective before ranking samples, genes, pathways, mechanisms or visual themes.
+   - Distinguish generic biological constraints from the study-specific advance. Do not make a universal feature, expected background pattern or broad field premise the title-level claim when the paper's novelty is a rarer candidate class, context-specific exception or mechanistic entry point.
+   - When the attractive story centers on a small candidate class, define the class boundary before using terms such as module, axis, programme or mechanism. A rare candidate set can be title-worthy only when the title uses bounded verbs such as identifies, reveals, links, marks, nominates or points to unless direct functional evidence supports stronger language.
+   - Keep discovery records, filtered candidates and validated representatives separate. Raw database hits, profile co-occurrences, broad annotations or catalog entries are discovery space, not curated genes, copy numbers, orthologs or mechanistic proof until domain order, gene models, redundancy and annotation quality are resolved.
+   - Treat database absence as catalog-bounded absence. Use `not detected in the current catalog`, `sampled groups`, `snapshot` or `screened data`, and avoid absolute absence or origin-date claims unless uniformly rescanned comparable datasets support them.
+   - Separate formation from persistence and function. Genome structure, synteny, repeats or domain architecture can constrain how a gene or module may have formed; they do not explain why it persisted or what it does without selection tests, conservation statistics or functional perturbation.
+   - Define operational classes as operational classes. If a class is inferred from contrast patterns, thresholds, whole-tissue data or reciprocal-cross design, avoid naming it as a proven causal mechanism until perturbation, tissue-resolution, allele-specific or time-course evidence closes that gap.
+   - Treat sRNA, methylation, TE/cis, chromatin, proximity and parent-aware annotations as support flags unless the analysis directly tests their causal effect on expression or phenotype. Do not call such flags a mechanism in the Results.
+   - When omics layers are stage-separated or not sample-paired, use `compatible with`, `evaluated alongside`, `group-level comparison` or `candidate framework`, not sample-level association or causal linkage language.
    - Adjudicate competing analysis routes by the experimental design, controls, statistical assumptions and biological validity; do not present a manuscript as "old version versus new version" or ask the paper to justify an internal analysis switch.
    - Treat earlier drafts, previous figures, user-noticed examples and named candidate types as hypotheses to audit, not as evidence that those items are intrinsically important.
    - Evaluate all plausible mechanism classes under the same evidence standard. A mechanism becomes central only when the data, design and literature support that role.
@@ -63,15 +71,24 @@ If the request is broad, the evidence is incomplete, or the literature base is n
    - Extract common analysis types, figure architectures, result-section rhythm, claim boundaries and validation expectations from the literature. Reuse only analyses that match the current design and data.
    - Study at least 20 high-impact figure examples when asked to target Nature Plants, Molecular Plant, Cell/Nature/Science-family, The Plant Cell or equivalent venues; record what each example teaches about panel logic, density, hierarchy and caption style, not wording or design imitation.
    - Convert literature learning into a story map before writing: central question, design logic, figure sequence, main claim, alternative explanations, validation boundary and novelty statement.
+   - Keep literature-intake metadata out of the manuscript. Do not write that the Results, Abstract or Discussion are based on reading a certain number of papers; convert field learning into citations, framing, figure logic and claim boundaries.
 
 4. Design the manuscript around figures.
    - Use figures as the spine of Results when the dataset supports it.
    - Each main figure should support one result theme. For formal composite figures, default to 4 or 6 panels unless the journal format or evidence structure gives a clear reason to use a different count.
+   - Order figure themes by evidence logic, not analysis chronology. For discovery papers, move from system/evidence map, to genome-wide constraint, to the rare or distinctive candidate class, to focused candidates, to orthogonal controls, to downstream state, then to a bounded model when the data support that flow.
+   - Title each figure and Results subsection as a biological finding. Avoid method or workflow titles such as "analysis distinguishes", "experimental design", "screen identifies" or "metabolomics analysis shows" when a result-centered title can state what was learned.
+   - Results subsection headings must read as conclusions supported by the data, not as setup, workflow, or author-intent statements. Avoid heading cores such as `entry point`, `links`, `points to`, `nominates`, `screening`, `scan`, `workflow`, `framework`, or `analysis` when they mainly describe why the work was done or what will be done next. Prefer observed-pattern verbs such as `contains`, `expands`, `concentrates`, `retains`, `diverges`, `is detected`, `shows`, or `carries` when the data support them.
+   - Do not use the first Results subsection to introduce materials or methods. If the first result comes from a catalog, scan, or filtering step, rewrite the heading around the biological or catalog finding, and move thresholds, search logic, and material provenance to Methods or a short support sentence.
+   - When revising a Results story, check the ordered headings alone. They should form a coherent evidence chain from core finding to distinctive class, candidate subset, orthogonal support, and bounded validation signal. If the headings read like a list of analyses performed, reorganize before polishing sentences.
+   - If a main figure is a synthesis model, hypothesis or experimental roadmap, label it explicitly as such. Do not present a conceptual model or planned assay panel as if it were direct experimental evidence.
+   - Keep figure captions, panel labels, Results text and source-data registries synchronized. If a panel title says `enriched`, `aligned`, `compensated`, `module` or `mechanism`, verify that the displayed statistic actually supports that term; otherwise use `represented`, `direction comparison`, `candidate set` or `support flags`.
    - Select plot types from the user's actual data, result question and statistical structure. Do not create maps, 3D surfaces, contours or other high-impact visuals unless the user's data contain the coordinates, continuous variables, replicate distributions or matrices needed to support them.
    - For each panel, record the data reason: what question the panel answers, what file or worksheet supplies the values, which statistic or model is used, and where the Results text cites it.
    - Keep tables for dense values, models, sample metadata, statistics, supplementary material and source data.
    - Build figures from the manuscript's evidence map, not from whatever plot exists already. Existing plots can supply data or cautionary examples, but they should not lock the final visual logic.
    - If AI image generation is used for visual exploration, treat generated images as style concepts only. Redraw data-bearing panels from traceable source data before manuscript delivery.
+   - Keep internal QA files, contact sheets, validator ledgers, process notes and old draft filenames outside any external-facing submission package unless the user explicitly asks for an audit bundle.
 
 5. Write as a paper, not as a report.
    - Default section order: Title, Abstract with keywords, Introduction, Results, Discussion, Methods, Data availability, Acknowledgements, Author contributions, Competing interests and References.
@@ -79,6 +96,8 @@ If the request is broad, the evidence is incomplete, or the literature base is n
    - Draft in evidence-first order when building a full research article: Results and figures, then Introduction/Discussion framing, then title and Abstract.
    - Give each paragraph one job: context, gap, approach, result, comparison, mechanism, implication or limitation. Split paragraphs that try to do two jobs at once.
    - Results should report observations first, then end each subsection with one restrained scientific conclusion.
+   - Results text should map to figure panels without becoming a caption. Describe what each panel contributes to the result theme, avoid "Figure X shows..." sentence subjects, remove analysis-process prose, and close each subsection with a restrained conclusion that follows from the displayed data.
+   - Write figure-led Results as finding first, figure support second: `X was enriched or restricted (Figure 2A,B)`, not `Figure 2 shows X`.
    - Discussion should interpret mechanisms, connect literature, state limitations and define functional or practical follow-up without presenting future technical steps as the scientific goal.
    - For English manuscripts, remove non-English characters from main text, figure labels, tables and DOCX XML unless the journal explicitly allows them.
    - State the positive scientific finding directly. Avoid rhetorical reversals such as "not X but Y", "rather than", "cannot prove", process defenses, and sentences that explain why an analysis route was chosen.
@@ -101,6 +120,7 @@ If the request is broad, the evidence is incomplete, or the literature base is n
    - Exclude obsolete module outputs, old filenames and out-of-scope source sheets from clean submission packages.
    - Keep key stage results, processed matrices, source data, figures, reports and manuscript packages synchronized to the working output directory. Do not copy large raw or intermediate files into manuscript packages unless explicitly required.
    - Rebuild all outputs from scripts after revising text, figures or package contents.
+   - For final packages, verify manuscript, metadata, tables, README, manifests and checksums agree on database dates, software versions, accessions and file locations. Regenerate manifests and zips only after final QC files are copied. Data/Code availability must not overstate reproducibility when scripts require external or local inputs.
 
 ## Figure Rules
 
@@ -123,6 +143,7 @@ Minimum figure checks:
 
 Minimum writing checks:
 - Do not overclaim causality from correlation, association, enrichment or exploratory screens.
+- Do not overclaim origin, timing, diversification, formation mechanism, selection, retention or function from catalog distribution, guide trees, synteny, repeat-neighbor screens, conserved domain order or conceptual models alone.
 - Do not frame a technical assay, primer design, screenshot, code step or data-cleaning step as a biological or scientific result.
 - Avoid self-descriptive prose such as "this draft", "as requested", "kept out", "not shown", "we followed the user's instructions" or "the figure shows a story".
 - Remove internal process details, local paths, TODO placeholders, old version names, author-side rationale and project-management language from manuscript text, captions, tables and package files.

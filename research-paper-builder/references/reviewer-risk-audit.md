@@ -30,6 +30,11 @@ Severity guide:
 ## Common High-Risk Patterns
 
 - Title or Abstract claims mechanism but evidence is association, annotation or external validation.
+- Title or Abstract claims origin timing, diversification, formation mechanism, selection, retention or function when evidence is only catalog distribution, representative guide tree, conserved architecture, synteny or repeat-neighbor screening.
+- Raw database hits, profile co-occurrences or screen records are treated as curated genes, orthologs, copy numbers or validated candidates.
+- Absence in a database snapshot is written as biological absence rather than catalog-bounded non-detection.
+- A model, schematic or experimental roadmap is presented as a Result without clearly labeling it as synthesis or hypothesis.
+- Data or Code availability overstates reproducibility, exposes local paths, or disagrees with package metadata, manifests, database dates or checksums.
 - A central figure lacks source data, statistics, sample size or clear controls.
 - Results are organized by analysis chronology rather than scientific question.
 - A known gene, marker or dataset is presented as a new discovery.

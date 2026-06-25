@@ -32,6 +32,7 @@ Before delivery:
 - references cited in captions are also present in the reference list;
 - no reference-paper examples are cited merely because they were used for style matching;
 - citation style matches the target journal.
+- search logs, reading-matrix size and reference-paper style-learning notes stay outside the formal manuscript unless the manuscript is itself a review or methods paper about that corpus.
 
 ## Claim-Support Audit
 
@@ -98,8 +99,12 @@ Draft the statement around actual access paths:
 - code repository, commit, release or archive DOI when available;
 - controlled-access or author-request data with reason;
 - restrictions from human subjects, proprietary material or unpublished breeding lines.
+- actual package directories when a lightweight source-data package is supplied, such as `source_data/`, `tables/`, `figures/`, `analysis_scripts/`, `logs/` or `qc/`.
+- raw inputs or external resources that are required for a full rerun but are not included.
 
 Avoid vague statements such as "data are available on request" when repository deposition is expected. If deposition is pending, state what must be deposited before submission.
+Do not expose local workstation paths, server paths, private project directories, SSH aliases, usernames, credentials or internal version paths in Data or Code availability.
+Do not overstate reproducibility. If a script records the generation workflow but depends on local or external input tables, say that full end-to-end reruns require those inputs instead of calling the package fully reproducible.
 
 ## FAIR And Reproducibility Check
 
@@ -110,6 +115,9 @@ For source data and code:
 - sample IDs map to metadata;
 - scripts can reproduce processed tables and figures;
 - large raw files are referenced rather than copied into lightweight manuscript packages unless required.
+- database freeze dates, release numbers, query strings, counts and hashes match between manuscript Methods, metadata files and main tables.
+- package manifests and checksums are generated after all final QC reports, figures, tables and manuscripts have been copied.
+- checksums or logs use package-relative paths rather than local absolute paths.
 
 ## Output Pattern
 

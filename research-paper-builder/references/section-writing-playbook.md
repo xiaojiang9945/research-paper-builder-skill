@@ -35,6 +35,10 @@ Good titles name the object and the supported advance. Avoid:
 - broad field claims when the study supports a narrower validation layer;
 - unsupported superlatives.
 
+When a study contains both a dominant generic background pattern and a rarer distinctive signal, put the distinctive supported advance in the title and keep the generic pattern as framing unless the generic pattern itself is the novelty. For small candidate classes, prefer bounded title verbs such as `reveals`, `marks`, `links`, `nominates`, `points to` or `is associated with`. Avoid `reshapes`, `reprograms`, `drives`, `controls` or `causes` unless direct time-course, tissue-specific, perturbation or functional data close the causal chain.
+
+If a named class is operational, say so at first use and keep the verb strength aligned with the assay. A threshold-defined, contrast-defined, whole-tissue or stage-separated class can `mark`, `prioritize` or `nominate` candidates; it should not `gate`, `drive`, `control` or `explain` a developmental endpoint unless direct evidence supports that mechanism.
+
 ## Abstract
 
 Use a compact progression:
@@ -72,6 +76,13 @@ Use figures as the spine when possible:
 - explain the immediate meaning;
 - end the subsection with one restrained conclusion.
 - For each main figure, write Results text that names panel letters and explains what each panel contributes to the result theme.
+- Use result-centered subsection headings. A heading should state the biological finding or candidate claim, not the method used to obtain it. Replace headings like `Triad analysis separates...`, `Metabolomics identifies...`, `Experimental design...` or `Screening nominates...` with the supported biological result.
+- Make Results headings conclusion-like, not preparatory. Avoid heading cores such as `entry point`, `links`, `points to`, `nominates`, `screening`, `scan`, `workflow`, `framework`, or `analysis` when they mainly describe a plan, bridge, or method. Use headings that state observed patterns, such as a family expanding, a branch concentrating expansion, a candidate class sharing features, a module retaining conserved anchors, a transcriptome showing detection/compartment bias, or haplotypes carrying population variation.
+- Do not let the first Results subsection function as Materials and Methods. If the first analysis is a catalog or scan, title it by the resulting biological/catalog structure and put thresholds, input provenance and filtering logic in Methods.
+- Read only the Results headings as a story test. The headings should progress as a coherent evidence chain from baseline repertoire, to pangenome expansion, to the distinctive branch, to conserved/divergent architecture, to candidate features, to external expression support, to bounded population variation. If they read like a chronological methods list, rebuild the outline before editing prose.
+- When a rare candidate class is embedded in a larger constrained background, present the background as the discovery boundary, then the rare class, then the focused candidate, then orthogonal controls and downstream states. Do not inflate a small heterogeneous candidate set into a `module` unless the data support shared regulation, enrichment, co-expression or functional coherence.
+- Use `support flags`, `co-occurring evidence` or `candidate-prioritization features` for nearby epigenetic, sRNA, methylation, TE/cis or parent-aware annotations unless the study directly tests those features as causal regulators.
+- For non-paired or stage-separated omics integration, write Results as group-level compatibility, effect-direction comparison or a candidate framework. Do not imply sample-level correlation, temporal persistence or mechanistic linkage unless the design measures those quantities.
 - Do not deliver text-only Results when the project has enough data for integrated figures. Create a figure plan, source data and caption even if final visual rendering is a separate task.
 
 Do not start Results subsections with broad literature background. Do not present file conversion, primer design, plotting or data cleaning as scientific findings.

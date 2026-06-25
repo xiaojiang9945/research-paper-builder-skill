@@ -70,6 +70,17 @@ Avoid:
 - `proves`, `establishes`, `redefines`, `unprecedented`, `first ever` unless independently defensible;
 - field-wide claims from one accession, environment, dataset or model;
 - mechanism claims from annotation, enrichment or association alone.
+- title-level claims that turn a small candidate set into a mechanism, module, programme or developmental driver without direct functional or temporal evidence;
+- verbs such as `reshapes`, `remodels`, `reprograms`, `drives`, `controls`, `causes`, `triggers` or `orchestrates` when the evidence is based on candidate prioritization, association, enrichment, whole-tissue measurements or non-paired time points.
+
+For high-impact framing, separate three layers explicitly:
+- `background constraint`: a broad or expected pattern that defines the search space;
+- `distinctive candidate signal`: the rare, context-specific or novel class that earns the story;
+- `validation boundary`: the experiment or endpoint needed before causal developmental language is justified.
+
+Use operational terminology carefully. A contrast-defined class can be a powerful discovery tool, but its name should not smuggle in causality. Prefer phrases such as `operational class`, `A-low pattern`, `candidate set`, `support flags`, `direction comparison` and `stage-separated compatibility` when the data are whole-tissue, non-paired across omics layers, or generated at different developmental stages.
+
+For external-facing packages, remove validator outputs, contact sheets, revision ledgers, prompt/process notes, internal QA language and old draft names. Keep those files in a separate project QA directory when they are useful for the authors.
 
 ## What To Flag
 
@@ -77,5 +88,9 @@ Flag before polishing if:
 - the manuscript has no single central advance;
 - the strongest result is a technical screen but the title claims biology;
 - validation is external or indirect but the text claims mechanism;
+- the title centers a generic biological feature while the distinctive advance is a rarer exception or candidate class;
+- the Results order follows analysis chronology instead of moving from evidence map to constraint, distinctive signal, focused candidate, control layer, downstream state and bounded model;
+- figures, captions and Results use stronger terms than the plotted statistic supports, especially `enriched`, `aligned`, `module`, `gate`, `driver` or `mechanism`;
+- stage-separated or non-paired omics layers are written as temporal persistence, direct linkage or sample-level association;
 - the display-item count is too high for the target venue;
 - the paper is written around analysis chronology rather than evidence logic.

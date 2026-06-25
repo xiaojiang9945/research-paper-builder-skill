@@ -2,13 +2,25 @@
 
 `research-paper-builder` is a Codex skill for turning research materials into a manuscript-ready package: evidence map, figure-led Results, journal-style sections, citation/data checks, reviewer-risk audit, and submission QC.
 
-The intended first public release is **1.0.0**. Internal optimization commits are not release versions; create public tags or release archives only from an owner-approved release commit.
+Current public release: **1.1.0**. The first public release was **1.0.0**; internal optimization commits are not release versions.
 
 <p align="center">
   <img src="assets/graphical_abstract.png" alt="Research Paper Builder graphical abstract" width="980">
 </p>
 
 The graphical abstract summarizes the full-package workflow: project inputs, literature gate, evidence map, figure-led Results, manuscript package, and submission QC.
+
+## Latest Update
+
+Version `1.1.0` strengthens publication-readiness checks for full research manuscripts:
+
+- tighter title and Abstract evidence boundaries, especially for candidate screens, catalog searches, association results, and conceptual models;
+- clearer separation between generic background constraints, distinctive study-specific advances, and validation boundaries;
+- result-centered Results headings and finding-first figure references so the manuscript reads as evidence, not analysis chronology;
+- stricter figure/caption/source-data synchronization, including explicit labels for synthesis models, hypotheses, and experimental roadmaps;
+- stronger citation, data availability, reproducibility, package hygiene, privacy, and reviewer-risk checks.
+
+See [RELEASE_NOTES.md](RELEASE_NOTES.md) for the condensed release summary.
 
 ## What It Helps With
 
@@ -36,6 +48,7 @@ research-paper-builder-skill/
 |   +-- synthetic-wheat-study/        # runnable synthetic wheat demo input and output
 +-- AGENTS.md                         # repo-level editing and validation instructions
 +-- LICENSE
++-- RELEASE_NOTES.md
 +-- USE_POLICY.md
 +-- SECURITY.md
 +-- VERSION
@@ -44,9 +57,9 @@ research-paper-builder-skill/
 
 ## Versioning
 
-The first approved public release should be tagged `v1.0.0`, matching the root `VERSION` file. Do not use internal optimization commit hashes, internal testing iterations, or demo-improvement milestones as release versions.
+The root `VERSION` file records the current release version. Do not use internal optimization commit hashes, internal testing iterations, or demo-improvement milestones as release versions.
 
-After `1.0.0`, use semantic versioning:
+Use semantic versioning:
 
 - patch versions for documentation fixes, validation-script fixes, or small wording corrections;
 - minor versions for new reusable workflows, references, demos, or validation checks;

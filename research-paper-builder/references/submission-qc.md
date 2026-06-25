@@ -18,12 +18,16 @@ Do not claim final-package QC passed for a partial route.
 - Section order matches the user request or target journal.
 - If work occurred inside a repository, applicable `AGENTS.md` and README validation instructions were followed.
 - Title, abstract and result headings are concise and informative.
+- Title and Abstract claim only what the strongest direct evidence supports; raw database or screen counts are not presented as curated genes, validated samples or resolved mechanisms.
 - Results describe findings before conclusions.
+- Results use finding-first figure references and do not use `Figure X shows...` as the dominant sentence pattern.
 - Discussion does not repeat every result value.
 - Methods contain enough detail for reproducibility.
 - Technical tasks are not presented as scientific results.
 - All placeholder author, affiliation, funding and accession text is clearly marked or replaced.
 - The one-sentence argument contract matches the title, Abstract, Results and Discussion.
+- Formation, persistence/retention and function are separated unless one experiment directly links them.
+- Database absence, taxonomic restriction or time-window language is bounded by the actual sampling, catalog version, search date and annotation limits.
 - The terminology ledger, if created, has no unresolved forbidden variants in final files.
 - The manuscript passport or equivalent state note is updated for full-package work, but no passport/process/QC language appears inside the formal manuscript.
 - Material gaps that affect factual claims, methods, metadata, accessions, permissions or authorship are recorded as author actions outside the manuscript.
@@ -67,6 +71,8 @@ Do not claim final-package QC passed for a partial route.
 - Raw data are not overwritten.
 - Non-English characters are removed from English submission files unless required.
 - Data availability statement names the actual repository, accession, DOI, supplementary table or pending author action.
+- Database freeze dates, release identifiers, query strings, record counts and hashes agree across Methods, source tables, metadata and package files.
+- Code availability distinguishes a fully reproducible workflow from a generation script that still requires external or local input tables.
 
 ## Package Checks
 
@@ -80,6 +86,14 @@ Recommended folders:
 - `source_data/`
 - `analysis_scripts/`
 
+Package hygiene:
+- no local workstation paths, server paths, user names, credentials, SSH aliases or old version directories appear in manuscript text, package text files, metadata, checksums or logs;
+- README commands match the actual package layout;
+- manifests and checksum files include final QC outputs and are regenerated after all files are copied;
+- checksum files use package-relative paths;
+- zip contents match the final package folder;
+- DOCX/PDF has all figures embedded, matching captions, no tracked changes/comments, no hidden prompt text, and image descriptions or caption styles when supported.
+
 Run `scripts/validate_research_package.py` when possible and report the JSON summary in plain language.
 
 ## Five-Pass QC Gate
@@ -90,6 +104,7 @@ Pass 1: evidence and data consistency.
 - Verify all numerical claims against source data, not prior drafts.
 - Confirm Results statements match figures, tables and source-data files.
 - Check that unsupported mechanisms, field claims or causality claims are removed.
+- Confirm raw discovery sets, filtered candidates and validated representatives remain distinct in title, Abstract, Results, captions and tables.
 
 Pass 2: citation and reference consistency.
 - Verify every in-text citation maps to a reference entry.
@@ -103,6 +118,7 @@ Pass 3: scientific language and claim scope.
 - Check terminology ledger compliance.
 - Check grammar, paragraph jobs, tense, hedging and forbidden phrases.
 - Check style-quality patterns: throat-clearing openers, repetitive transitions, template-like paragraph lengths, synonym cycling, punctuation tics and unsupported superlatives.
+- Remove literature-intake process claims such as how many papers were read, unless that corpus is the object of the study.
 
 Pass 4: figure and visual quality.
 - Inspect each source panel and composite.
@@ -121,6 +137,7 @@ Pass 5: format, privacy and package hygiene.
 - Confirm Data Availability, author placeholders and remaining journal-specific actions are clearly marked.
 - Confirm package artifacts are separated by purpose: manuscript files, source data, figures, scripts, QC reports, passports, reviewer-risk audits and author-action lists.
 - Check quality trajectory after revisions: fixes should not introduce new citation drift, figure-text mismatch, argument overreach, method under-specification or style regression.
+- Confirm database dates and package manifests are internally consistent after the last rebuild.
 
 ## Pre-Submission Risk Checks
 
